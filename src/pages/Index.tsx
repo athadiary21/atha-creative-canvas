@@ -5,6 +5,7 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import LanguageToggle from "@/components/LanguageToggle";
+import Courses from "@/components/Courses";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <About />
       <Portfolio />
+      <Courses />
       <Skills />
       <Contact />
       <Footer />

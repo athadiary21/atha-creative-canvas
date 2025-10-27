@@ -98,6 +98,12 @@
   "footer": {
     "copyright": "Hak Cipta Dilindungi."
   },
+  "homeCourses": {
+    "title": "Jelajahi Blog ",
+    "titleHighlight": "Saya 📚",
+    "subtitle": "Telusuri koleksi kursus yang telah saya buat tentang berbagai topik.",
+    "seeAll": "Lihat Semua Blog"
+  },
   "courses": {
     "title": "Pembelajaran",
     "subtitle": "Jelajahi berbagai materi pembelajaran dari fotografi, desain, hingga coding. Semua gratis untuk meningkatkan skill kreatif kamu.",

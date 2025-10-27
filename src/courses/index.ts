@@ -1,6 +1,11 @@
-// Export all courses from different categories
-export * from './photography/photography';
+import { photographyCourses } from './photography/photography';
 
 // You can add more categories here in the future:
-// export * from './design/design';
-// export * from './coding/coding';
+// import { designCourses } from './design/design';
+// import { codingCourses } from './coding/coding';
+
+export const allCourses = [
+  ...photographyCourses,
+  // ...designCourses,
+  // ...codingCourses,
+];

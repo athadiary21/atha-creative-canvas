@@ -98,6 +98,12 @@
   "footer": {
     "copyright": "All Rights Reserved."
   },
+  "homeCourses": {
+    "title": "Explore My ",
+    "titleHighlight": "Blog 📚",
+    "subtitle": "Browse through a collection of courses I've created on various topics.",
+    "seeAll": "See All Blog 📚"
+  },
   "courses": {
     "title": "Learning",
     "subtitle": "Explore various learning materials from photography, design, to coding. All free to improve your creative skills.",
