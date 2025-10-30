@@ -6,8 +6,13 @@ const LanguageToggle = () => {
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'id' ? 'en' : 'id';
-    i18n.changeLanguage(newLang);
+    if (i18n.language === 'id') {
+      i18n.changeLanguage('en');
+    } else if (i18n.language === 'en') {
+      i18n.changeLanguage('jp');
+    } else {
+      i18n.changeLanguage('id');
+    }
   };
 
   return (
@@ -18,7 +23,11 @@ const LanguageToggle = () => {
       className="gap-2 fixed top-4 right-4 z-50 bg-card/80 backdrop-blur-sm"
     >
       <Globe className="w-4 h-4" />
-      <span className="font-medium">{i18n.language === 'id' ? 'EN' : 'ID'}</span>
+      <span className="font-medium">
+        {i18n.language === 'id' && 'EN'}
+        {i18n.language === 'en' && 'JP'}
+        {i18n.language === 'jp' && 'ID'}
+      </span>
     </Button>
   );
 };

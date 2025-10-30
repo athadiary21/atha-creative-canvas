@@ -1,0 +1,135 @@
+{
+  "hero": {
+    "badge": "クリエイティブ・テクノロジスト",
+    "name": "アタ・ラシッド",
+    "tagline": "多くを学び、本物を創造し、際立つ",
+    "description": "写真、コーディング、芸術的創造性を組み合わせて、見事な傑作を生み出します",
+    "viewWork": "私の作品を見る",
+    "contactMe": "お問い合わせ",
+    "learning": "ブログ 📚"
+  },
+  "about": {
+    "title": "私について",
+    "titleHighlight": "アタ",
+    "subtitle": "学び続け、創造し続けるクリエイティブ・テクノロジストの旅",
+    "born": "生年月日",
+    "birthDate": "2008年8月20日",
+    "from": "出身",
+    "fromLocation": "カリマンタン島、バリクパパン",
+    "liveIn": "居住地",
+    "liveInLocation": "デポック、ベジ",
+    "education": "学歴",
+    "school1": "シンダン・バラン第一小学校",
+    "school2": "アスカール・カウニー・ターフィズ寄宿学校",
+    "school3": "ムンザラン・インドネシア・マルチメディア寄宿学校",
+    "storyTitle": "アートとロジックの融合",
+    "storyP1": "カリマンタンからデポックまで、私の旅は探求に満ちています。写真は世界を異なる視点から見る方法を教えてくれ、デザインは想像力をクールなビジュアルに変える方法を与えてくれました。",
+    "storyP2": "コーディング？それは全てのアイデアを現実的でインタラクティブにするための武器です。この3つの組み合わせにより、美的センスのある商品写真から、使いやすいインターフェースデザイン、現実の問題を解決するアプリケーションまで、無限に創造することができます。",
+    "storyP3": "私にとって、創造性とは単にアートだけでなく、テクノロジーとそれをいかにして影響を与えるために使うかということです。"
+  },
+  "portfolio": {
+    "title": "注目の",
+    "titleHighlight": "作品",
+    "subtitle": "様々なクリエイティブ分野からの最高のプロジェクト集",
+    "filterAll": "すべての作品",
+    "filterPhoto": "写真",
+    "filterCode": "コーディング",
+    "projects": {
+      "product": {
+        "title": "商品写真シリーズ",
+        "description": "ローカルブランド向けの美的照明と構図による商品写真集"
+      },
+      "portfolio": {
+        "title": "ポートフォリオサイト",
+        "description": "スムーズなアニメーションとレスポンシブデザインを備えたインタラクティブなポートフォリオサイト"
+      },
+      "street": {
+        "title": "ストリート写真",
+        "description": "視覚的なストーリーテリングで街角の率直な瞬間を記録"
+      },
+      "ecommerce": {
+        "title": "Eコマースプラットフォーム",
+        "description": "ショッピングカート、決済ゲートウェイ、管理者ダッシュボードを備えたフルスタックEコマースサイト"
+      },
+      "event": {
+        "title": "イベント記録",
+        "description": "フォトジャーナリスティックなスタイルでの結婚式や企業イベントの記録"
+      },
+      "mobile": {
+        "title": "モバイルアプリデザイン",
+        "description": "インタラクティブなプロトタイプを備えたフィットネストラッキングモバイルアプリのUI/UXデザイン"
+      }
+    },
+    "openInNewTab": "{{title}} を新しいタブで開く"
+  },
+  "skills": {
+    "title": "スキルと専門知識",
+    "subtitle": "視覚的創造性、技術的スキル、問題解決能力のユニークな組み合わせで革新的なソリューションを生み出します",
+    "photography": "写真",
+    "webDev": "ウェブ開発",
+    "creativeDesign": "クリエイティブデザイン",
+    "aiIntegration": "AI統合",
+    "toolsTech": "ツールと技術",
+    "softSkills": "ソフトスキル"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "titleHighlight": "",
+    "subtitle": "面白いプロジェクトやコラボレーションはありませんか？お話ししましょう！",
+    "name": "お名前",
+    "namePlaceholder": "あなたのお名前",
+    "email": "メールアドレス",
+    "emailPlaceholder": "email@example.com",
+    "message": "メッセージ",
+    "messagePlaceholder": "プロジェクトやアイデアについて教えてください...",
+    "send": "WhatsAppでメッセージを送信",
+    "cardTitle": "繋がりましょう！",
+    "cardDescription": "新しいプロジェクト、クリエイティブなコラボレーション、または写真、デザイン、テクノロジーに関するディスカッションをいつでも歓迎します。",
+    "instagram": "インスタグラム",
+    "facebook": "フェイスブック",
+    "whatsapp": "ワッツアップ",
+    "emailLabel": "メールアドレス",
+    "errorName": "名前は必須です",
+    "errorEmail": "無効なメールアドレスです",
+    "errorMessage": "メッセージは必須です",
+    "successTitle": "成功しました！",
+    "successDescription": "メッセージはWhatsApp経由で送信されます"
+  },
+  "footer": {
+    "copyright": "無断複写・転載を禁じます。"
+  },
+  "homeCourses": {
+    "title": "私の",
+    "titleHighlight": "ブログを探る 📚",
+    "subtitle": "私が作成した様々なトピックのコース集をご覧ください。",
+    "seeAll": "すべてのブログを見る 📚"
+  },
+  "courses": {
+    "title": "学習",
+    "subtitle": "写真、デザインからコーディングまで、様々な学習教材を探求しましょう。すべて無料であなたのクリエイティブスキルを向上させます。",
+    "search": "学習を検索...",
+    "all": "すべて",
+    "photography": "写真",
+    "design": "デザイン",
+    "coding": "コーディング",
+    "showing": "表示中",
+    "results": "コース",
+    "for": "の",
+    "noResults": "結果が見つかりません",
+    "noResultsDesc": "お探しのものは作成中かもしれません、しばらくお待ちください 😄",
+    "ctaTitle": "プロのサービスが必要ですか？",
+    "ctaDesc": "プロの写真撮影やウェブサイトサービスが必要な場合は、当社のウェブサイトをご覧ください。",
+    "ctaButton": "プロのサービスを見る",
+    "backHome": "← ホームに戻る",
+    "duration": "分",
+    "level": {
+      "beginner": "初心者",
+      "intermediate": "中級者",
+      "advanced": "上級者"
+    }
+  },
+  "courseViewer": {
+    "back": "戻る",
+    "loading": "コースを読み込み中..."
+  }
+}
