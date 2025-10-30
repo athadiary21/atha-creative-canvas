@@ -1,0 +1,135 @@
+{
+  "hero": {
+    "badge": "Technologue Créatif",
+    "name": "Atha Rasyid",
+    "tagline": "Apprendre beaucoup, créer réel, se démarquer",
+    "description": "Combiner la photographie, le codage et la créativité artistique en chefs-d'œuvre époustouflants",
+    "viewWork": "Voir Mon Travail",
+    "contactMe": "Contactez-moi",
+    "learning": "Blog 📚"
+  },
+  "about": {
+    "title": "À propos",
+    "titleHighlight": "d'Atha",
+    "subtitle": "Le parcours d'un technologue créatif qui continue d'apprendre et de créer",
+    "born": "Né",
+    "birthDate": "20 août 2008",
+    "from": "De",
+    "fromLocation": "Balikpapan, Kalimantan",
+    "liveIn": "Vit à",
+    "liveInLocation": "Depok, Beji",
+    "education": "Éducation",
+    "school1": "SDN Sindang Barang 1",
+    "school2": "Pondok Tahfidz Askar Kauny",
+    "school3": "Pondok Multimédia Munzalan Indonésie",
+    "storyTitle": "Art + Logique Combinés",
+    "storyP1": "De Kalimantan à Depok, mon voyage est plein d'exploration. La photographie m'a appris à voir le monde sous différents angles, le design m'a donné un moyen de transformer l'imagination en visuels sympas.",
+    "storyP2": "Le codage ? C'est l'arme pour rendre toutes les idées réelles et interactives. La combinaison des trois me permet de créer sans limites - des photos de produits esthétiques, des conceptions d'interface conviviales, aux applications qui résolvent de vrais problèmes.",
+    "storyP3": "Pour moi, la créativité n'est pas seulement une question d'art - mais aussi de technologie et de la manière de l'utiliser pour avoir un impact."
+  },
+  "portfolio": {
+    "title": "En vedette",
+    "titleHighlight": "Travaux",
+    "subtitle": "Collection des meilleurs projets de divers domaines créatifs",
+    "filterAll": "Tous les Travaux",
+    "filterPhoto": "Photographie",
+    "filterCode": "Codage",
+    "projects": {
+      "product": {
+        "title": "Série de Photographies de Produits",
+        "description": "Collection de photos de produits avec un éclairage et une composition esthétiques pour les marques locales"
+      },
+      "portfolio": {
+        "title": "Site Web de Portfolio",
+        "description": "Site web de portfolio interactif avec des animations fluides et un design réactif"
+      },
+      "street": {
+        "title": "Photographie de Rue",
+        "description": "Documentation de moments candides dans les rues de la ville avec une narration visuelle"
+      },
+      "ecommerce": {
+        "title": "Plateforme de Commerce Électronique",
+        "description": "Site web de commerce électronique full-stack avec panier d'achat, passerelle de paiement et tableau de bord d'administration"
+      },
+      "event": {
+        "title": "Documentation d'Événements",
+        "description": "Documentation de mariages et d'événements d'entreprise avec un style photojournalistique"
+      },
+      "mobile": {
+        "title": "Conception d'Application Mobile",
+        "description": "Conception UI/UX pour une application mobile de suivi de la condition physique avec un prototype interactif"
+      }
+    },
+    "openInNewTab": "Ouvrir {{title}} dans un nouvel onglet"
+  },
+  "skills": {
+    "title": "Compétences et Expertise",
+    "subtitle": "Combinaison unique de créativité visuelle, de compétences techniques et de résolution de problèmes qui produit des solutions innovantes",
+    "photography": "Photographie",
+    "webDev": "Développement Web",
+    "creativeDesign": "Design Créatif",
+    "aiIntegration": "Intégration de l'IA",
+    "toolsTech": "Outils et Technologies",
+    "softSkills": "Compétences Non Techniques"
+  },
+  "contact": {
+    "title": "Contact",
+    "titleHighlight": "Moi",
+    "subtitle": "Vous avez un projet ou une collaboration intéressante ? Parlons-en !",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "email": "E-mail",
+    "emailPlaceholder": "email@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Parlez-moi de votre projet ou de votre idée...",
+    "send": "Envoyer un Message via WhatsApp",
+    "cardTitle": "Connectons-nous !",
+    "cardDescription": "Toujours ouvert à de nouveaux projets, des collaborations créatives ou simplement des discussions sur la photographie, le design et la technologie.",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "whatsapp": "WhatsApp",
+    "emailLabel": "E-mail",
+    "errorName": "Le nom est requis",
+    "errorEmail": "E-mail invalide",
+    "errorMessage": "Le message est requis",
+    "successTitle": "Succès !",
+    "successDescription": "Le message sera envoyé via WhatsApp"
+  },
+  "footer": {
+    "copyright": "Tous droits réservés."
+  },
+  "homeCourses": {
+    "title": "Explorez Mon ",
+    "titleHighlight": "Blog 📚",
+    "subtitle": "Parcourez une collection de cours que j'ai créés sur divers sujets.",
+    "seeAll": "Voir Tout le Blog 📚"
+  },
+  "courses": {
+    "title": "Apprentissage",
+    "subtitle": "Explorez divers supports d'apprentissage de la photographie, du design au codage. Tout est gratuit pour améliorer vos compétences créatives.",
+    "search": "Rechercher l'apprentissage...",
+    "all": "Tout",
+    "photography": "Photographie",
+    "design": "Design",
+    "coding": "Codage",
+    "showing": "Affichage",
+    "results": "cours",
+    "for": "pour",
+    "noResults": "Aucun résultat trouvé",
+    "noResultsDesc": "Peut-être que ce que vous cherchez est en cours de création, veuillez patienter 😄",
+    "ctaTitle": "Besoin de Services Professionnels ?",
+    "ctaDesc": "Si vous avez besoin de services professionnels de photographie et de sites web, visitez notre site web.",
+    "ctaButton": "Voir les Services Professionnels",
+    "backHome": "← Retour à l'Accueil",
+    "duration": "minutes",
+    "level": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    }
+  },
+  "courseViewer": {
+    "back": "Retour",
+    "loading": "Chargement du cours..."
+  }
+}

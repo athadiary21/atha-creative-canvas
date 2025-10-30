@@ -1,0 +1,135 @@
+{
+  "hero": {
+    "badge": "Kreativer Technologe",
+    "name": "Atha Rasyid",
+    "tagline": "Viel lernen, echt schaffen, herausragen",
+    "description": "Fotografie, Programmierung und künstlerische Kreativität zu atemberaubenden Meisterwerken vereinen",
+    "viewWork": "Meine Arbeit ansehen",
+    "contactMe": "Kontaktieren Sie mich",
+    "learning": "Blog 📚"
+  },
+  "about": {
+    "title": "Über",
+    "titleHighlight": "Atha",
+    "subtitle": "Die Reise eines kreativen Technologen, der ständig lernt und erschafft",
+    "born": "Geboren",
+    "birthDate": "20. August 2008",
+    "from": "Aus",
+    "fromLocation": "Balikpapan, Kalimantan",
+    "liveIn": "Lebt in",
+    "liveInLocation": "Depok, Beji",
+    "education": "Bildung",
+    "school1": "SDN Sindang Barang 1",
+    "school2": "Pondok Tahfidz Askar Kauny",
+    "school3": "Pondok Multimedia Munzalan Indonesia",
+    "storyTitle": "Kunst + Logik kombiniert",
+    "storyP1": "Von Kalimantan nach Depok ist meine Reise voller Entdeckungen. Die Fotografie hat mich gelehrt, die Welt aus verschiedenen Perspektiven zu sehen, das Design hat mir einen Weg gegeben, die Vorstellungskraft in coole Visuals umzusetzen.",
+    "storyP2": "Programmieren? Es ist die Waffe, um alle Ideen real und interaktiv zu machen. Die Kombination der drei ermöglicht es mir, ohne Grenzen zu schaffen - von ästhetischen Produktfotos über benutzerfreundliche Interface-Designs bis hin zu Anwendungen, die echte Probleme lösen.",
+    "storyP3": "Für mich geht es bei Kreativität nicht nur um Kunst - sondern auch um Technologie und wie man sie nutzt, um etwas zu bewirken."
+  },
+  "portfolio": {
+    "title": "Vorgestellte",
+    "titleHighlight": "Arbeiten",
+    "subtitle": "Sammlung der besten Projekte aus verschiedenen kreativen Bereichen",
+    "filterAll": "Alle Arbeiten",
+    "filterPhoto": "Fotografie",
+    "filterCode": "Programmieren",
+    "projects": {
+      "product": {
+        "title": "Produktfotografie-Serie",
+        "description": "Sammlung von Produktfotos mit ästhetischer Beleuchtung und Komposition für lokale Marken"
+      },
+      "portfolio": {
+        "title": "Portfolio-Website",
+        "description": "Interaktive Portfolio-Website mit flüssigen Animationen und responsivem Design"
+      },
+      "street": {
+        "title": "Straßenfotografie",
+        "description": "Dokumentation von ungestellten Momenten auf den Straßen der Stadt mit visuellem Storytelling"
+      },
+      "ecommerce": {
+        "title": "E-Commerce-Plattform",
+        "description": "Full-Stack-E-Commerce-Website mit Warenkorb, Zahlungsgateway und Admin-Dashboard"
+      },
+      "event": {
+        "title": "Event-Dokumentation",
+        "description": "Hochzeits- und Firmenevent-Dokumentation im fotojournalistischen Stil"
+      },
+      "mobile": {
+        "title": "Mobile App-Design",
+        "description": "UI/UX-Design für eine Fitness-Tracking-Mobile-App mit interaktivem Prototyp"
+      }
+    },
+    "openInNewTab": "Öffnen Sie {{title}} in einem neuen Tab"
+  },
+  "skills": {
+    "title": "Fähigkeiten & Fachwissen",
+    "subtitle": "Einzigartige Kombination aus visueller Kreativität, technischen Fähigkeiten und Problemlösung, die innovative Lösungen hervorbringt",
+    "photography": "Fotografie",
+    "webDev": "Web-Entwicklung",
+    "creativeDesign": "Kreatives Design",
+    "aiIntegration": "KI-Integration",
+    "toolsTech": "Tools & Technologien",
+    "softSkills": "Soft Skills"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "titleHighlight": "Mich",
+    "subtitle": "Haben Sie ein interessantes Projekt oder eine Zusammenarbeit? Lassen Sie uns reden!",
+    "name": "Name",
+    "namePlaceholder": "Ihr Name",
+    "email": "E-Mail",
+    "emailPlaceholder": "email@example.com",
+    "message": "Nachricht",
+    "messagePlaceholder": "Erzählen Sie mir von Ihrem Projekt oder Ihrer Idee...",
+    "send": "Nachricht über WhatsApp senden",
+    "cardTitle": "Lassen Sie uns verbinden!",
+    "cardDescription": "Immer offen für neue Projekte, kreative Kooperationen oder einfach nur Diskussionen über Fotografie, Design und Technologie.",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "whatsapp": "WhatsApp",
+    "emailLabel": "E-Mail",
+    "errorName": "Name ist erforderlich",
+    "errorEmail": "Ungültige E-Mail",
+    "errorMessage": "Nachricht ist erforderlich",
+    "successTitle": "Erfolg!",
+    "successDescription": "Nachricht wird über WhatsApp gesendet"
+  },
+  "footer": {
+    "copyright": "Alle Rechte vorbehalten."
+  },
+  "homeCourses": {
+    "title": "Entdecken Sie meinen ",
+    "titleHighlight": "Blog 📚",
+    "subtitle": "Durchsuchen Sie eine Sammlung von Kursen, die ich zu verschiedenen Themen erstellt habe.",
+    "seeAll": "Alle Blog 📚 ansehen"
+  },
+  "courses": {
+    "title": "Lernen",
+    "subtitle": "Entdecken Sie verschiedene Lernmaterialien von Fotografie, Design bis hin zum Programmieren. Alles kostenlos, um Ihre kreativen Fähigkeiten zu verbessern.",
+    "search": "Lernen suchen...",
+    "all": "Alle",
+    "photography": "Fotografie",
+    "design": "Design",
+    "coding": "Programmieren",
+    "showing": "Zeige",
+    "results": "Kurse",
+    "for": "für",
+    "noResults": "Keine Ergebnisse gefunden",
+    "noResultsDesc": "Vielleicht wird das, was Sie suchen, gerade erstellt. Bitte warten Sie 😄",
+    "ctaTitle": "Benötigen Sie professionelle Dienstleistungen?",
+    "ctaDesc": "Wenn Sie professionelle Fotografie- und Website-Dienstleistungen benötigen, besuchen Sie unsere Website.",
+    "ctaButton": "Professionelle Dienstleistungen anzeigen",
+    "backHome": "← Zurück zur Startseite",
+    "duration": "Minuten",
+    "level": {
+      "beginner": "Anfänger",
+      "intermediate": "Mittelstufe",
+      "advanced": "Fortgeschritten"
+    }
+  },
+  "courseViewer": {
+    "back": "Zurück",
+    "loading": "Kurs wird geladen..."
+  }
+}

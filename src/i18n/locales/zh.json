@@ -1,0 +1,135 @@
+{
+  "hero": {
+    "badge": "创意技术专家",
+    "name": "Atha Rasyid",
+    "tagline": "多学习，多创造，脱颖而出",
+    "description": "将摄影、编码和艺术创造力结合成令人惊叹的杰作",
+    "viewWork": "查看我的作品",
+    "contactMe": "联系我",
+    "learning": "博客 📚"
+  },
+  "about": {
+    "title": "关于",
+    "titleHighlight": "Atha",
+    "subtitle": "一个不断学习和创造的创意技术专家的旅程",
+    "born": "出生",
+    "birthDate": "2008年8月20日",
+    "from": "来自",
+    "fromLocation": "巴厘巴板, 加里曼丹",
+    "liveIn": "居住在",
+    "liveInLocation": "德波, 贝吉",
+    "education": "教育",
+    "school1": "SDN Sindang Barang 1",
+    "school2": "Pondok Tahfidz Askar Kauny",
+    "school3": "Pondok Multimedia Munzalan Indonesia",
+    "storyTitle": "艺术与逻辑的结合",
+    "storyP1": "从加里曼丹到德波，我的旅程充满了探索。摄影教会我从不同的角度看世界，设计给了我一种将想象力变成酷炫视觉效果的方式。",
+    "storyP2": "编码？它是使所有想法变为现实和互动的武器。三者的结合使我能够无限制地创作 - 从美学产品照片，用户友好的界面设计，到解决实际问题的应用程序。",
+    "storyP3": "对我来说，创造力不仅仅是艺术 - 还包括技术以及如何利用它产生影响。"
+  },
+  "portfolio": {
+    "title": "精选",
+    "titleHighlight": "作品",
+    "subtitle": "来自各个创意领域的最佳项目集合",
+    "filterAll": "所有作品",
+    "filterPhoto": "摄影",
+    "filterCode": "编码",
+    "projects": {
+      "product": {
+        "title": "产品摄影系列",
+        "description": "为本地品牌拍摄的具有美学灯光和构图的产品照片集"
+      },
+      "portfolio": {
+        "title": "作品集网站",
+        "description": "具有流畅动画和响应式设计的交互式作品集网站"
+      },
+      "street": {
+        "title": "街头摄影",
+        "description": "用视觉叙事记录城市街道上的坦率时刻"
+      },
+      "ecommerce": {
+        "title": "电子商务平台",
+        "description": "具有购物车、支付网关和管理仪表板的全栈电子商务网站"
+      },
+      "event": {
+        "title": "活动纪实",
+        "description": "以新闻摄影风格记录婚礼和公司活动"
+      },
+      "mobile": {
+        "title": "移动应用设计",
+        "description": "具有交互式原型的健身追踪移动应用的UI/UX设计"
+      }
+    },
+    "openInNewTab": "在新标签页中打开 {{title}}"
+  },
+  "skills": {
+    "title": "技能与专长",
+    "subtitle": "视觉创造力、技术技能和解决问题能力的独特结合，产生创新的解决方案",
+    "photography": "摄影",
+    "webDev": "网页开发",
+    "creativeDesign": "创意设计",
+    "aiIntegration": "人工智能集成",
+    "toolsTech": "工具与技术",
+    "softSkills": "软技能"
+  },
+  "contact": {
+    "title": "联系",
+    "titleHighlight": "我",
+    "subtitle": "有有趣的项目或合作吗？我们谈谈吧！",
+    "name": "姓名",
+    "namePlaceholder": "你的名字",
+    "email": "电子邮件",
+    "emailPlaceholder": "email@example.com",
+    "message": "信息",
+    "messagePlaceholder": "告诉我你的项目或想法...",
+    "send": "通过WhatsApp发送消息",
+    "cardTitle": "让我们联系吧！",
+    "cardDescription": "随时欢迎新项目、创意合作，或者只是讨论摄影、设计和技术。",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "whatsapp": "WhatsApp",
+    "emailLabel": "电子邮件",
+    "errorName": "姓名是必需的",
+    "errorEmail": "无效的电子邮件",
+    "errorMessage": "信息是必需的",
+    "successTitle": "成功！",
+    "successDescription": "消息将通过WhatsApp发送"
+  },
+  "footer": {
+    "copyright": "版权所有。"
+  },
+  "homeCourses": {
+    "title": "探索我的 ",
+    "titleHighlight": "博客 📚",
+    "subtitle": "浏览我创建的关于各种主题的课程集合。",
+    "seeAll": "查看所有博客 📚"
+  },
+  "courses": {
+    "title": "学习",
+    "subtitle": "探索从摄影、设计到编码的各种学习材料。全部免费，以提高您的创意技能。",
+    "search": "搜索学习...",
+    "all": "全部",
+    "photography": "摄影",
+    "design": "设计",
+    "coding": "编码",
+    "showing": "显示",
+    "results": "课程",
+    "for": "为",
+    "noResults": "未找到结果",
+    "noResultsDesc": "也许您正在寻找的内容正在创建中，请稍候 😄",
+    "ctaTitle": "需要专业服务吗？",
+    "ctaDesc": "如果您需要专业的摄影和网站服务，请访问我们的网站。",
+    "ctaButton": "查看专业服务",
+    "backHome": "← 返回首页",
+    "duration": "分钟",
+    "level": {
+      "beginner": "初级",
+      "intermediate": "中级",
+      "advanced": "高级"
+    }
+  },
+  "courseViewer": {
+    "back": "返回",
+    "loading": "正在加载课程..."
+  }
+}
