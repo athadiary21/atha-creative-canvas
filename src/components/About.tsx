@@ -2,6 +2,7 @@ import { Calendar, MapPin, GraduationCap, Home } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
 import profileImage from "@/assets/profile.jpg";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const About = () => {
   const {
     t
@@ -35,10 +36,20 @@ const About = () => {
 
           {/* Profile Image */}
           <div className="flex justify-center mb-12">
-            <div className="relative w-48 h-48 md:w-64 md:h-64">
-              <img src={profileImage} alt="Atha Rasyid Risqi" className="w-full h-full object-cover rounded-2xl shadow-glow border-4 border-primary/20" />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10" />
-            </div>
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="relative w-64 h-64 md:w-80 md:h-80 cursor-pointer group">
+                  <img src={profileImage} alt="Atha Rasyid Risqi" className="w-full h-full object-cover rounded-2xl shadow-glow border-4 border-primary/20 transition-transform duration-300 group-hover:scale-105" />
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10" />
+                  <div className="absolute inset-0 bg-black/50 rounded-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-white font-bold text-lg">{t('about.viewImage', 'View Image')}</p>
+                  </div>
+                </div>
+              </DialogTrigger>
+              <DialogContent className="p-0 bg-transparent border-0 max-w-4xl w-auto">
+                <img src={profileImage} alt="Atha Rasyid Risqi" className="w-full h-auto rounded-lg" />
+              </DialogContent>
+            </Dialog>
           </div>
 
           
