@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { allCourses } from "@/courses";
-import CourseCard from "./CourseCard";
+import { getFeaturedCourses } from "@/features/courses/data";
+import CourseCard from "./courses/CourseCard";
 import { Button } from "./ui/button";
+import { COURSES_CONFIG } from "@/lib/constants";
 
 const Courses = () => {
   const { t } = useTranslation();
-  const displayedCourses = allCourses.slice(0, 3);
+  const displayedCourses = getFeaturedCourses(COURSES_CONFIG.featuredCount);
 
   return (
     <section id="courses" className="py-20 md:py-32">

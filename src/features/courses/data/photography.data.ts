@@ -1,16 +1,4 @@
-export interface Course {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  duration: string;
-  level: "Beginner" | "Intermediate" | "Advanced";
-  thumbnail: string;
-  htmlFile: string;
-  tags: string[];
-  author: string;
-  publishDate: string;
-}
+import { Course } from '@/types/course';
 
 export const photographyCourses: Course[] = [
   {
@@ -22,13 +10,14 @@ export const photographyCourses: Course[] = [
     level: "Beginner",
     thumbnail: "/courses/photography/penemuan-photography.jpg",
     htmlFile: "/courses/photography/penemuan-photography.html",
-    tags: ["Sejarah", "Fotografi", "Niépce", "Daguerre", "Talbot", "Heliografi", "Daguerreotype", "Calotype"],
+    tags: ["Sejarah", "Fotografi", "Niépce", "Daguerre", "Talbot"],
     author: "Atha Rasyid Risqi",
-    publishDate: "2025-10"
+    publishDate: "2025-10",
+    featured: true,
   },
   {
     id: "photography-20th",
-    title: "Fotografi di abad ke-20",
+    title: "Fotografi di Abad ke-20",
     description: "Eksplorasi perkembangan fotografi sepanjang abad ke-20, termasuk kemajuan teknologi, gaya fotografi, dan pengaruh budaya yang membentuk dunia fotografi modern.",
     category: "photography",
     duration: "30 menit",
@@ -38,82 +27,84 @@ export const photographyCourses: Course[] = [
     tags: ["Sejarah", "Fotografi", "Perkembangan", "Teknologi"],
     author: "Atha Rasyid Risqi",
     publishDate: "2025-10",
+    featured: true,
   },
   {
     id: "jenis-camera",
-    title: "jenis-jenis kamera",
-    description: "jenis-jenis kamera yang digunakan dalam fotografi",
+    title: "Jenis-Jenis Kamera",
+    description: "Pelajari berbagai jenis kamera yang digunakan dalam fotografi, dari kamera film klasik hingga kamera digital modern.",
     category: "photography",
     duration: "60 menit",
     level: "Beginner",
     thumbnail: "/courses/photography/jenis-camera.jpg",
     htmlFile: "/courses/photography/jenis-camera.html",
-    tags: [ "Fotografi", "Perkembangan", "Teknologi"],
+    tags: ["Kamera", "Peralatan", "Teknologi"],
     author: "Atha Rasyid Risqi",
     publishDate: "2025-10",
   },
   {
     id: "fungsi-camera",
-    title: "Fungsi & Bagian dari kamera",
-    description: "fungsi dan bagian-bagian utama dari sebuah kamera fotografi",
+    title: "Fungsi & Bagian Kamera",
+    description: "Memahami fungsi dan bagian-bagian utama dari sebuah kamera fotografi untuk mengoptimalkan penggunaannya.",
     category: "photography",
     duration: "60 menit",
     level: "Beginner",
     thumbnail: "/courses/photography/fungsi-camera.jpg",
     htmlFile: "/courses/photography/fungsi-camera.html",
-    tags: [ "Fungsi", "Fotografi", "Perkembangan", "Teknologi"],
+    tags: ["Kamera", "Peralatan", "Teknik"],
     author: "Atha Rasyid Risqi",
     publishDate: "2025-10",
   },
   {
     id: "jenis-lensa",
-    title: "jenis-jenis lensa kamera",
-    description: "jenis-jenis lensa yang digunakan dalam fotografi",
+    title: "Jenis-Jenis Lensa Kamera",
+    description: "Panduan lengkap tentang berbagai jenis lensa yang digunakan dalam fotografi dan karakteristik masing-masing.",
     category: "photography",
     duration: "60 menit",
     level: "Beginner",
     thumbnail: "/courses/photography/jenis-lensa.jpg",
     htmlFile: "/courses/photography/jenis-lensa.html",
-    tags: [ "jenis", "Fotografi", "Perkembangan", "Teknologi"],
+    tags: ["Lensa", "Peralatan", "Teknologi"],
     author: "Atha Rasyid Risqi",
     publishDate: "2025-10",
   },
   {
     id: "focal-length",
-    title: "Focal Length pada lensa",
-    description: "Focal Length pada lensa kamera dan pengaruhnya terhadap hasil foto",
+    title: "Focal Length pada Lensa",
+    description: "Memahami focal length pada lensa kamera dan pengaruhnya terhadap hasil foto yang Anda ambil.",
     category: "photography",
     duration: "90 menit",
     level: "Beginner",
     thumbnail: "/courses/photography/focal.jpg",
     htmlFile: "/courses/photography/focal-length.html",
-    tags: [ "jenis", "Fotografi", "Perkembangan", "Teknologi", "lensa"],
+    tags: ["Lensa", "Teknik", "Teori"],
     author: "Atha Rasyid Risqi",
     publishDate: "2025-10",
   },
   {
     id: "histogram",
     title: "Pengertian Histogram",
-    description: "Pengertian Histogram dalam fotografi dan cara membacanya untuk meningkatkan kualitas foto",
+    description: "Pelajari cara membaca histogram dalam fotografi untuk meningkatkan kualitas foto dan exposure yang tepat.",
     category: "photography",
     duration: "60 menit",
     level: "Beginner",
     thumbnail: "/courses/photography/histogram.jpg",
     htmlFile: "/courses/photography/histogram.html",
-    tags: [ "Histogram", "Metering",  "Fotografi", "Perkembangan", "jenis","Teknologi"],
+    tags: ["Histogram", "Metering", "Teknik"],
     author: "Atha Rasyid Risqi",
     publishDate: "2025-10",
+    featured: true,
   },
   {
     id: "iso-shutter-aperture",
-    title: "Pengertian ISO, Shutter Speed, dan Aperture",
-    description: "Cara mengatur ISO, Shutter Speed, dan Aperture pada kamera untuk mendapatkan hasil foto yang optimal",
+    title: "ISO, Shutter Speed, dan Aperture",
+    description: "Panduan lengkap mengatur ISO, Shutter Speed, dan Aperture pada kamera untuk mendapatkan hasil foto yang optimal.",
     category: "photography",
     duration: "180 menit",
     level: "Beginner",
     thumbnail: "/courses/photography/iso.jpg",
     htmlFile: "/courses/photography/iso.html",
-    tags: [ "Shutter", "ISO",  "Fotografi", "Perkembangan", "jenis", "Aperture", "Teknologi"],
+    tags: ["ISO", "Shutter", "Aperture", "Teknik"],
     author: "Atha Rasyid Risqi",
     publishDate: "2025-10",
   },

@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Clock, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Course } from "@/courses/photography/photography";
+import { Course } from "@/types/course";
 
 interface CourseCardProps {
   course: Course;
