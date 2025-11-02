@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { ReactNode } from "react";
 
 interface HeaderProps {
   title?: string;
   subtitle?: string;
   backTo?: string;
   backLabel?: string;
+  children?: ReactNode;
 }
 
-const Header = ({ title, subtitle, backTo, backLabel }: HeaderProps) => {
+const Header = ({ title, subtitle, backTo, backLabel, children }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border/50">
       <div className="container px-4 md:px-6 py-4">
@@ -35,6 +37,12 @@ const Header = ({ title, subtitle, backTo, backLabel }: HeaderProps) => {
               </div>
             )}
           </div>
+          
+          {children && (
+            <div className="flex items-center gap-2">
+              {children}
+            </div>
+          )}
         </div>
       </div>
     </header>

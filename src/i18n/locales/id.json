@@ -123,6 +123,10 @@
     "ctaButton": "Lihat Layanan Profesional",
     "backHome": "← Kembali ke Home",
     "duration": "menit",
+    "bookmarked": "Ditandai",
+    "unbookmarked": "Tanda dihapus",
+    "bookmarkAdded": "Course berhasil ditandai",
+    "bookmarkRemoved": "Tanda berhasil dihapus",
     "level": {
       "beginner": "Beginner",
       "intermediate": "Intermediate",
@@ -131,6 +135,13 @@
   },
   "courseViewer": {
     "back": "Kembali",
-    "loading": "Memuat pembelajaran..."
+    "loading": "Memuat pembelajaran...",
+    "markComplete": "Tandai Selesai",
+    "completed": "Selesai!",
+    "completedDesc": "Course berhasil ditandai sebagai selesai"
+  },
+  "home": {
+    "title": "Beranda",
+    "description": "Creative technologist yang menggabungkan fotografi, coding, dan desain"
   }
 }

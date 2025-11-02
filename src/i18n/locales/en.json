@@ -123,6 +123,10 @@
     "ctaButton": "View Professional Services",
     "backHome": "← Back to Home",
     "duration": "minutes",
+    "bookmarked": "Bookmarked",
+    "unbookmarked": "Bookmark removed",
+    "bookmarkAdded": "Course successfully bookmarked",
+    "bookmarkRemoved": "Bookmark successfully removed",
     "level": {
       "beginner": "Beginner",
       "intermediate": "Intermediate",
@@ -131,6 +135,13 @@
   },
   "courseViewer": {
     "back": "Back",
-    "loading": "Loading course..."
+    "loading": "Loading course...",
+    "markComplete": "Mark as Complete",
+    "completed": "Completed!",
+    "completedDesc": "Course successfully marked as completed"
+  },
+  "home": {
+    "title": "Home",
+    "description": "Creative technologist combining photography, coding, and design"
   }
 }
