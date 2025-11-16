@@ -108,4 +108,17 @@ export const photographyCourses: Course[] = [
     author: "Atha Rasyid Risqi",
     publishDate: "2025-10",
   },
+  {
+    id: "teknik-komposisi",
+    title: "Teknik Komposisi Fotografi",
+    description: "Pelajari berbagai teknik komposisi dalam fotografi untuk menciptakan foto yang menarik dan estetis.",
+    category: "photography",
+    duration: "180 menit",
+    level: "Intermediate",
+    thumbnail: "/courses/photography/teknik.jpg",
+    htmlFile: "/courses/photography/teknik.html",
+    tags: ["ISO", "Shutter", "Aperture", "Teknik"],
+    author: "Atha Rasyid Risqi",
+    publishDate: "2025-10",
+  },
 ];
