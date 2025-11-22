@@ -6,10 +6,13 @@ import { Instagram, Facebook, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { z } from "zod";
+
 const Contact = () => {
   const { toast } = useToast();
   const { t } = useTranslation();
+  const { ref: sectionRef, isVisible } = useScrollAnimation();
   
   const contactSchema = z.object({
     name: z.string().trim().nonempty({ message: t('contact.errorName') }).max(100),
@@ -69,7 +72,13 @@ const Contact = () => {
       description: t('contact.successDescription')
     });
   };
-  return <section id="contact" className="py-20 md:py-32 relative">
+  return <section 
+      ref={sectionRef}
+      id="contact" 
+      className={`py-20 md:py-32 relative transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container px-4 md:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Header */}

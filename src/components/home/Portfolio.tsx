@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Camera, Code, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import streetPhoto from "@/assets/portfolio/street-photography.jpg";
 import productPhoto from "@/assets/portfolio/product-photography.jpg";
 import portfolioWebsite from "@/assets/portfolio/portfolio-website.png";
@@ -24,6 +25,7 @@ interface Project {
 const Portfolio = () => {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<Category>("all");
+  const { ref: sectionRef, isVisible } = useScrollAnimation();
 
   const categories = [
     { id: "all", label: t('portfolio.filterAll'), icon: Sparkles },
@@ -87,7 +89,13 @@ const Portfolio = () => {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-20 md:py-32 relative">
+    <section 
+      ref={sectionRef}
+      id="portfolio" 
+      className={`py-20 md:py-32 relative transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
