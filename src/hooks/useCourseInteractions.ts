@@ -64,14 +64,10 @@ export const useCourseReviews = (courseId: string) => {
   const [reviews, setReviews] = useState<CourseReview[]>([]);
   const [averageRating, setAverageRating] = useState(0);
 
-  const loadReviews = () => {
+  useEffect(() => {
     const data = getCourseReviews(courseId);
     setReviews(data);
     setAverageRating(getAverageRating(courseId));
-  };
-
-  useEffect(() => {
-    loadReviews();
   }, [courseId]);
 
   const addReview = (rating: number, comment: string, userName: string) => {
@@ -83,7 +79,11 @@ export const useCourseReviews = (courseId: string) => {
       userName
     };
     addCourseReview(review);
-    loadReviews();
+    
+    // Reload reviews after adding
+    const data = getCourseReviews(courseId);
+    setReviews(data);
+    setAverageRating(getAverageRating(courseId));
   };
 
   return { reviews, averageRating, addReview };
