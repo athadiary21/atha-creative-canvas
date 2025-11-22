@@ -107,11 +107,10 @@
   },
   "courses": {
     "title": "Aprendizaje",
-    "subtitle": "Explora diversos materiales de aprendizaje desde fotografía, diseño, hasta codificación. Todo gratis para mejorar tus habilidades creativas.",
+    "subtitle": "Explora diversos materiales de aprendizaje desde fotografía hasta codificación. Todo gratis para mejorar tus habilidades creativas.",
     "search": "Buscar aprendizaje...",
     "all": "Todo",
     "photography": "Fotografía",
-    "design": "Diseño",
     "coding": "Codificación",
     "showing": "Mostrando",
     "results": "cursos",

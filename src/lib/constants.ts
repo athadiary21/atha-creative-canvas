@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
 export const COURSES_CONFIG = {
   itemsPerPage: 9,
   featuredCount: 3,
-  categories: ['photography', 'design', 'coding', 'business'] as const,
+  categories: ['photography', 'coding', 'business'] as const,
 };
 
 export const ROUTES = {
@@ -22,6 +22,5 @@ export const ROUTES = {
 export const COURSE_CATEGORIES: Array<{ id: CourseCategory | 'all'; labelKey: string }> = [
   { id: 'all', labelKey: 'courses.all' },
   { id: 'photography', labelKey: 'courses.photography' },
-  { id: 'design', labelKey: 'courses.design' },
   { id: 'coding', labelKey: 'courses.coding' },
 ];
