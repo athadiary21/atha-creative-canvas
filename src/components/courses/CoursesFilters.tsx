@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { BookOpen, Camera, Code, Palette } from "lucide-react";
+import { BookOpen, Camera, Code } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { CourseCategory } from "@/types/course";
 
@@ -16,7 +16,6 @@ const CoursesFilters = ({ activeCategory, onCategoryChange }: CoursesFiltersProp
   const categories = [
     { id: "all" as CategoryFilter, label: t('courses.all'), icon: BookOpen },
     { id: "photography" as CategoryFilter, label: t('courses.photography'), icon: Camera },
-    { id: "design" as CategoryFilter, label: t('courses.design'), icon: Palette },
     { id: "coding" as CategoryFilter, label: t('courses.coding'), icon: Code },
   ];
 

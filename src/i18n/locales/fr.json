@@ -107,11 +107,10 @@
   },
   "courses": {
     "title": "Apprentissage",
-    "subtitle": "Explorez divers supports d'apprentissage de la photographie, du design au codage. Tout est gratuit pour améliorer vos compétences créatives.",
+    "subtitle": "Explorez divers supports d'apprentissage de la photographie au codage. Tout est gratuit pour améliorer vos compétences créatives.",
     "search": "Rechercher l'apprentissage...",
     "all": "Tout",
     "photography": "Photographie",
-    "design": "Design",
     "coding": "Codage",
     "showing": "Affichage",
     "results": "cours",

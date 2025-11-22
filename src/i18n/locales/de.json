@@ -107,11 +107,10 @@
   },
   "courses": {
     "title": "Lernen",
-    "subtitle": "Entdecken Sie verschiedene Lernmaterialien von Fotografie, Design bis hin zum Programmieren. Alles kostenlos, um Ihre kreativen Fähigkeiten zu verbessern.",
+    "subtitle": "Entdecken Sie verschiedene Lernmaterialien von Fotografie bis hin zum Programmieren. Alles kostenlos, um Ihre kreativen Fähigkeiten zu verbessern.",
     "search": "Lernen suchen...",
     "all": "Alle",
     "photography": "Fotografie",
-    "design": "Design",
     "coding": "Programmieren",
     "showing": "Zeige",
     "results": "Kurse",

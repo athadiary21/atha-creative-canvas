@@ -107,11 +107,10 @@
   },
   "courses": {
     "title": "Learning",
-    "subtitle": "Explore various learning materials from photography, design, to coding. All free to improve your creative skills.",
+    "subtitle": "Explore various learning materials from photography to coding. All free to improve your creative skills.",
     "search": "Search learning...",
     "all": "All",
     "photography": "Photography",
-    "design": "Design",
     "coding": "Coding",
     "showing": "Showing",
     "results": "courses",

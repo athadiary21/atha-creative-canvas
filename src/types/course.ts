@@ -14,7 +14,7 @@ export interface Course {
   prerequisites?: string[];
 }
 
-export type CourseCategory = 'photography' | 'design' | 'coding' | 'business';
+export type CourseCategory = 'photography' | 'coding' | 'business';
 export type CourseLevel = 'Beginner' | 'Intermediate' | 'Advanced';
 
 export interface CourseFilters {
