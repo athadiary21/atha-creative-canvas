@@ -1,11 +1,12 @@
 import { Course } from '@/types/course';
 import { photographyCourses } from './photography.data';
+import { codingCourses } from './coding.data';
 
 /**
  * Get all courses from all categories
  */
 export const getAllCourses = (): Course[] => {
-  return [...photographyCourses];
+  return [...photographyCourses, ...codingCourses];
 };
 
 /**
