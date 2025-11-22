@@ -3,9 +3,34 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslation } from "react-i18next";
+import { useEffect, useRef, useState } from "react";
 import profileImage from "@/assets/profile.jpg";
+
 const About = () => {
   const { t } = useTranslation();
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   const socialLinks = [
     {
@@ -38,7 +63,13 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 relative">
+    <section 
+      ref={sectionRef}
+      id="about" 
+      className={`py-20 md:py-32 relative transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container px-4 md:px-6 relative">
         <div className="max-w-7xl mx-auto">
           {/* Social Sidebar - Desktop */}
