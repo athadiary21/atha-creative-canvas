@@ -4,13 +4,21 @@ import { getFeaturedCourses } from "@/features/courses/data";
 import CourseCard from "./courses/CourseCard";
 import { Button } from "./ui/button";
 import { COURSES_CONFIG } from "@/lib/constants";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Courses = () => {
   const { t } = useTranslation();
   const displayedCourses = getFeaturedCourses(COURSES_CONFIG.featuredCount);
+  const { ref: sectionRef, isVisible } = useScrollAnimation();
 
   return (
-    <section id="courses" className="py-20 md:py-32">
+    <section 
+      ref={sectionRef}
+      id="courses" 
+      className={`py-20 md:py-32 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">

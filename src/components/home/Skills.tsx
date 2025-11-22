@@ -1,9 +1,11 @@
 import { Camera, Code, Palette, Zap, Sparkles, Lightbulb } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Skills = () => {
   const { t } = useTranslation();
+  const { ref: sectionRef, isVisible } = useScrollAnimation();
   
   const skillCategories = [
     {
@@ -45,7 +47,13 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gradient-subtle relative overflow-hidden">
+    <section 
+      ref={sectionRef}
+      id="skills" 
+      className={`py-20 bg-gradient-subtle relative overflow-hidden transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
