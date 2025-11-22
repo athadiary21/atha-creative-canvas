@@ -39,10 +39,10 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 md:py-32 relative">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 relative">
         <div className="max-w-7xl mx-auto">
           {/* Social Sidebar - Desktop */}
-          <div className="hidden lg:flex fixed left-8 top-1/2 -translate-y-1/2 flex-col gap-4 z-10">
+          <div className="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2 flex-col gap-4 z-10">
             {socialLinks.map((link) => (
               <a
                 key={link.label}
