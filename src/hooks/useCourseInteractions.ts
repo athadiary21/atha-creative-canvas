@@ -30,6 +30,17 @@ export const useCourseProgress = (courseId: string) => {
     setProgress(newProgress);
   };
 
+  const updateProgress = (progressPercent: number) => {
+    const newProgress: CourseProgress = {
+      courseId,
+      completed: progressPercent >= 100,
+      lastAccessed: Date.now(),
+      progress: Math.min(Math.max(progressPercent, 0), 100)
+    };
+    updateCourseProgress(newProgress);
+    setProgress(newProgress);
+  };
+
   const markAsCompleted = () => {
     const newProgress: CourseProgress = {
       courseId,
@@ -41,7 +52,7 @@ export const useCourseProgress = (courseId: string) => {
     setProgress(newProgress);
   };
 
-  return { progress, markAsViewed, markAsCompleted };
+  return { progress, markAsViewed, markAsCompleted, updateProgress };
 };
 
 export const useCourseBookmark = (courseId: string) => {

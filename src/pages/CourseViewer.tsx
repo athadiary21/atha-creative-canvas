@@ -1,5 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageToggle from "@/components/common/LanguageToggle";
 import Header from "@/components/layout/Header";
@@ -12,6 +12,7 @@ import { CheckCircle2, Download } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { generateCertificate, saveCertificateRecord } from "@/lib/certificateGenerator";
 import { Input } from "@/components/ui/input";
+import { Progress } from "@/components/ui/progress";
 import {
   Dialog,
   DialogContent,
@@ -26,9 +27,10 @@ const CourseViewer = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [showCertificateDialog, setShowCertificateDialog] = useState(false);
   const [userName, setUserName] = useState('');
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   
   const { course, error } = useCourse(courseId);
-  const { progress, markAsViewed, markAsCompleted } = useCourseProgress(courseId || '');
+  const { progress, markAsViewed, markAsCompleted, updateProgress } = useCourseProgress(courseId || '');
   
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 500);
@@ -40,6 +42,46 @@ const CourseViewer = () => {
       markAsViewed();
     }
   }, [course]);
+
+  // Track scroll progress in iframe
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    const handleIframeLoad = () => {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
+        if (!iframeDoc) return;
+
+        const updateScrollProgress = () => {
+          const scrollTop = iframeDoc.documentElement.scrollTop || iframeDoc.body.scrollTop;
+          const scrollHeight = iframeDoc.documentElement.scrollHeight || iframeDoc.body.scrollHeight;
+          const clientHeight = iframeDoc.documentElement.clientHeight || iframeDoc.body.clientHeight;
+          
+          const scrollableHeight = scrollHeight - clientHeight;
+          const scrollPercentage = scrollableHeight > 0 
+            ? Math.round((scrollTop / scrollableHeight) * 100)
+            : 100;
+
+          updateProgress(scrollPercentage);
+        };
+
+        iframeDoc.addEventListener('scroll', updateScrollProgress);
+        updateScrollProgress(); // Initial check
+
+        return () => {
+          iframeDoc.removeEventListener('scroll', updateScrollProgress);
+        };
+      } catch (error) {
+        console.error('Cannot access iframe content:', error);
+      }
+    };
+
+    iframe.addEventListener('load', handleIframeLoad);
+    return () => {
+      iframe.removeEventListener('load', handleIframeLoad);
+    };
+  }, [courseId]);
 
   const handleMarkComplete = () => {
     setShowCertificateDialog(true);
@@ -136,6 +178,18 @@ const CourseViewer = () => {
         </DialogContent>
       </Dialog>
 
+      {/* Progress Bar */}
+      <div className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container mx-auto px-4 py-2">
+          <div className="flex items-center gap-3">
+            <Progress value={progress?.progress || 0} className="flex-1" />
+            <span className="text-sm font-medium text-muted-foreground min-w-[3rem] text-right">
+              {progress?.progress || 0}%
+            </span>
+          </div>
+        </div>
+      </div>
+
       <main className="flex-1">
         {isLoading && (
           <div className="flex items-center justify-center h-96">
@@ -146,11 +200,12 @@ const CourseViewer = () => {
         )}
         
         <iframe 
+          ref={iframeRef}
           id="course-iframe" 
           src={course.htmlFile} 
           title={course.title} 
           className={`w-full border-0 ${isLoading ? 'hidden' : 'block'}`} 
-          style={{ height: 'calc(100vh - 73px)' }} 
+          style={{ height: 'calc(100vh - 73px - 3rem)' }} 
           sandbox="allow-same-origin allow-scripts" 
         />
       </main>
