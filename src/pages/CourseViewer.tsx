@@ -8,7 +8,7 @@ import SEO from "@/components/common/SEO";
 import { CourseStructuredData, BreadcrumbStructuredData } from "@/components/common/StructuredData";
 import { useCourseProgress } from "@/hooks/useCourseInteractions";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Download } from "lucide-react";
+import { CheckCircle2, Download, Trophy, Lock } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { generateCertificate, saveCertificateRecord } from "@/lib/certificateGenerator";
 import { Input } from "@/components/ui/input";
@@ -20,17 +20,25 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { QuizDialog } from "@/components/courses/QuizDialog";
+import { getQuizByCourseId } from "@/features/courses/data/quizzes";
+import { QuizResult } from "@/types/quiz";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const CourseViewer = () => {
   const { courseId } = useParams();
   const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
   const [showCertificateDialog, setShowCertificateDialog] = useState(false);
+  const [showQuizDialog, setShowQuizDialog] = useState(false);
   const [userName, setUserName] = useState('');
   const iframeRef = useRef<HTMLIFrameElement>(null);
   
   const { course, error } = useCourse(courseId);
-  const { progress, markAsViewed, markAsCompleted, updateProgress } = useCourseProgress(courseId || '');
+  const { progress, markAsViewed, updateProgress, saveQuizResult, canTakeQuiz } = useCourseProgress(courseId || '');
+  
+  const quiz = courseId ? getQuizByCourseId(courseId) : undefined;
+  const quizAttempts = progress?.quizAttempts || 0;
   
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 500);
@@ -83,14 +91,52 @@ const CourseViewer = () => {
     };
   }, [courseId]);
 
-  const handleMarkComplete = () => {
-    setShowCertificateDialog(true);
+  const handleTakeQuiz = () => {
+    if (!canTakeQuiz()) {
+      toast({
+        title: "Progress Belum 100%",
+        description: "Selesaikan course terlebih dahulu untuk mengikuti quiz",
+        variant: "destructive"
+      });
+      return;
+    }
+    setShowQuizDialog(true);
+  };
+
+  const handleQuizComplete = (passed: boolean, score: number, userAnswers: number[]) => {
+    const quizResult: QuizResult = {
+      courseId: courseId || '',
+      score,
+      totalQuestions: 5,
+      passed,
+      attempts: quizAttempts + 1,
+      lastAttempt: Date.now(),
+      userAnswers
+    };
+    
+    saveQuizResult(quizResult);
+    setShowQuizDialog(false);
+    
+    if (passed) {
+      toast({
+        title: "🎉 Selamat!",
+        description: `Anda lulus quiz dengan skor ${score}/5`,
+      });
+      // Open certificate dialog after passing quiz
+      setTimeout(() => {
+        setShowCertificateDialog(true);
+      }, 500);
+    } else {
+      toast({
+        title: "Belum Berhasil",
+        description: `Skor: ${score}/5. Pelajari materi kembali dan coba lagi!`,
+        variant: "destructive"
+      });
+    }
   };
 
   const handleGenerateCertificate = () => {
     if (!userName.trim() || !course) return;
-    
-    markAsCompleted();
     
     generateCertificate(course, userName.trim());
     
@@ -111,6 +157,9 @@ const CourseViewer = () => {
     setShowCertificateDialog(false);
     setUserName('');
   };
+
+  const isProgressComplete = (progress?.progress || 0) >= 100;
+  const hasPassedQuiz = progress?.quizPassed || false;
 
   if (error || !course) {
     return <Navigate to="/courses" replace />;
@@ -137,19 +186,59 @@ const CourseViewer = () => {
         backTo="/courses"
         backLabel={t('courseViewer.back')}
       >
-        {!progress?.completed && (
-          <Button onClick={handleMarkComplete} className="gap-2">
-            <CheckCircle2 className="w-4 h-4" />
-            {t('courseViewer.markComplete')}
-          </Button>
-        )}
-        {progress?.completed && (
-          <Button onClick={() => setShowCertificateDialog(true)} variant="outline" className="gap-2">
-            <Download className="w-4 h-4" />
-            Download Certificate
-          </Button>
-        )}
+        <TooltipProvider>
+          {!hasPassedQuiz ? (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div>
+                  <Button 
+                    onClick={handleTakeQuiz} 
+                    disabled={!isProgressComplete || !quiz}
+                    className="gap-2"
+                  >
+                    {!isProgressComplete ? (
+                      <>
+                        <Lock className="w-4 h-4" />
+                        Complete Course First
+                      </>
+                    ) : (
+                      <>
+                        <Trophy className="w-4 h-4" />
+                        {quizAttempts > 0 ? 'Retry Quiz' : 'Take Quiz'}
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </TooltipTrigger>
+              {!isProgressComplete && (
+                <TooltipContent>
+                  <p>Scroll hingga 100% untuk unlock quiz</p>
+                </TooltipContent>
+              )}
+              {!quiz && (
+                <TooltipContent>
+                  <p>Quiz belum tersedia untuk course ini</p>
+                </TooltipContent>
+              )}
+            </Tooltip>
+          ) : (
+            <Button onClick={() => setShowCertificateDialog(true)} className="gap-2">
+              <Download className="w-4 h-4" />
+              Download Certificate
+            </Button>
+          )}
+        </TooltipProvider>
       </Header>
+
+      {/* Quiz Dialog */}
+      {quiz && (
+        <QuizDialog
+          open={showQuizDialog}
+          onOpenChange={setShowQuizDialog}
+          quiz={quiz}
+          onComplete={handleQuizComplete}
+        />
+      )}
 
       <Dialog open={showCertificateDialog} onOpenChange={setShowCertificateDialog}>
         <DialogContent>
@@ -179,13 +268,24 @@ const CourseViewer = () => {
       </Dialog>
 
       {/* Progress Bar */}
-      <div className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 py-2">
+      <div className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+        <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-3">
             <Progress value={progress?.progress || 0} className="flex-1" />
             <span className="text-sm font-medium text-muted-foreground min-w-[3rem] text-right">
               {progress?.progress || 0}%
             </span>
+            {isProgressComplete && !hasPassedQuiz && quiz && (
+              <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">
+                Quiz Available
+              </span>
+            )}
+            {hasPassedQuiz && (
+              <span className="text-xs bg-green-500/10 text-green-600 dark:text-green-400 px-3 py-1 rounded-full font-medium flex items-center gap-1">
+                <CheckCircle2 className="w-3 h-3" />
+                Quiz Passed
+              </span>
+            )}
           </div>
         </div>
       </div>
