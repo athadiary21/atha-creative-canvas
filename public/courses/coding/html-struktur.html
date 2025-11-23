@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML5: Struktur & Semantik</title>
+    <title>HTML5: Structure & Semantics / Struktur & Semantik</title>
     <!-- Impor Font dan Ikon dari Google -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -462,6 +462,43 @@
             }
         }
 
+        /* Language Toggle Button */
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 8px;
+            background-color: white;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .lang-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--purple-main);
+            background-color: white;
+            color: var(--purple-main);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .lang-btn.active {
+            background-color: var(--purple-main);
+            color: white;
+        }
+        .lang-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(142, 68, 173, 0.3);
+        }
+        
+        /* Hide inactive language content */
+        [data-lang="id"] .en { display: none; }
+        [data-lang="en"] .id { display: none; }
+
         /* Ponsel (lebar <= 768px) */
         @media (max-width: 768px) {
             .slide {
@@ -498,32 +535,47 @@
     </style>
 </head>
 <body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang-btn="id">🇮🇩 ID</button>
+        <button class="lang-btn" data-lang-btn="en">🇬🇧 EN</button>
+    </div>
 
-    <!-- Slide 1: Judul Utama -->
+    <!-- Slide 1: Judul Utama / Main Title -->
     <section class="slide" id="slide-title">
         <div class="content">
             <div class="left-content">
-                <h1 class="main-title">HTML5: Struktur & Semantik</h1>
-                <p class="subtitle">Elemen-elemen semantik HTML5 yang memberikan makna pada struktur dokumen web, meningkatkan aksesibilitas dan SEO</p>
+                <h1 class="main-title">
+                    <span class="id">HTML5: Struktur & Semantik</span>
+                    <span class="en">HTML5: Structure & Semantics</span>
+                </h1>
+                <p class="subtitle">
+                    <span class="id">Elemen-elemen semantik HTML5 yang memberikan makna pada struktur dokumen web, meningkatkan aksesibilitas dan SEO</span>
+                    <span class="en">HTML5 semantic elements that provide meaning to web document structure, improving accessibility and SEO</span>
+                </p>
             </div>
             <div class="right-content">
                 <div class="bento-grid">
                     <div class="bento-item">
                         <div class="bento-item-title">
                             <i class="material-icons">format_align_left</i>
-                            <span>Elemen Semantik</span>
+                            <span class="id">Elemen Semantik</span>
+                            <span class="en">Semantic Elements</span>
                         </div>
                         <div class="bento-item-content">
-                            Memberikan <span class="highlight">makna</span> pada struktur HTML
+                            <span class="id">Memberikan <span class="highlight">makna</span> pada struktur HTML</span>
+                            <span class="en">Provides <span class="highlight">meaning</span> to HTML structure</span>
                         </div>
                     </div>
                     <div class="bento-item">
                         <div class="bento-item-title">
                             <i class="material-icons">accessibility</i>
-                            <span>Aksesibilitas</span>
+                            <span class="id">Aksesibilitas</span>
+                            <span class="en">Accessibility</span>
                         </div>
                         <div class="bento-item-content">
-                            Membantu <span class="highlight">screen reader</span> memahami konten
+                            <span class="id">Membantu <span class="highlight">screen reader</span> memahami konten</span>
+                            <span class="en">Helps <span class="highlight">screen readers</span> understand content</span>
                         </div>
                     </div>
                     <div class="bento-item">
@@ -532,16 +584,19 @@
                             <span>SEO</span>
                         </div>
                         <div class="bento-item-content">
-                            Meningkatkan <span class="highlight">peringkat</span> mesin pencari
+                            <span class="id">Meningkatkan <span class="highlight">peringkat</span> mesin pencari</span>
+                            <span class="en">Improves search engine <span class="highlight">rankings</span></span>
                         </div>
                     </div>
                     <div class="bento-item">
                         <div class="bento-item-title">
                             <i class="material-icons">code</i>
-                            <span>Pemeliharaan</span>
+                            <span class="id">Pemeliharaan</span>
+                            <span class="en">Maintenance</span>
                         </div>
                         <div class="bento-item-content">
-                            Kode lebih <span class="highlight">terstruktur</span> dan mudah dibaca
+                            <span class="id">Kode lebih <span class="highlight">terstruktur</span> dan mudah dibaca</span>
+                            <span class="en">More <span class="highlight">structured</span> and readable code</span>
                         </div>
                     </div>
                 </div>
@@ -553,28 +608,42 @@
     <section class="slide" id="slide-header">
         <div class="slide-content-container">
             <div class="header">
-                <h1 class="title">Elemen <span class="tag">&lt;header&gt;</span></h1>
-                <p class="subtitle">Bagian atas dari dokumen atau bagian yang berisi konten perkenalan</p>
+                <h1 class="title">
+                    <span class="id">Elemen <span class="tag">&lt;header&gt;</span></span>
+                    <span class="en"><span class="tag">&lt;header&gt;</span> Element</span>
+                </h1>
+                <p class="subtitle">
+                    <span class="id">Bagian atas dari dokumen atau bagian yang berisi konten perkenalan</span>
+                    <span class="en">Top section of a document or part containing introductory content</span>
+                </p>
             </div>
             <div class="content">
                 <div class="left-section">
                     <div class="info-box">
-                        <div class="info-title"><i class="material-icons">info</i><span>Tujuan</span></div>
+                        <div class="info-title">
+                            <i class="material-icons">info</i>
+                            <span class="id">Tujuan</span>
+                            <span class="en">Purpose</span>
+                        </div>
                         <div class="info-content">
                             <ul class="usage-list">
-                                <li class="usage-item"><i class="material-icons">check_circle</i><span>Menyimpan <span class="highlight">logo</span> dan <span class="highlight">judul situs</span></span></li>
-                                <li class="usage-item"><i class="material-icons">check_circle</i><span>Mengelompokkan <span class="highlight">navigasi utama</span></span></li>
-                                <li class="usage-item"><i class="material-icons">check_circle</i><span>Menampilkan <span class="highlight">informasi intro</span> halaman</span></li>
-                                <li class="usage-item"><i class="material-icons">check_circle</i><span>Bisa digunakan untuk <span class="highlight">header artikel</span> atau bagian lain</span></li>
+                                <li class="usage-item"><i class="material-icons">check_circle</i><span class="id">Menyimpan <span class="highlight">logo</span> dan <span class="highlight">judul situs</span></span><span class="en">Contains site <span class="highlight">logo</span> and <span class="highlight">title</span></span></li>
+                                <li class="usage-item"><i class="material-icons">check_circle</i><span class="id">Mengelompokkan <span class="highlight">navigasi utama</span></span><span class="en">Groups <span class="highlight">main navigation</span></span></li>
+                                <li class="usage-item"><i class="material-icons">check_circle</i><span class="id">Menampilkan <span class="highlight">informasi intro</span> halaman</span><span class="en">Displays page <span class="highlight">intro information</span></span></li>
+                                <li class="usage-item"><i class="material-icons">check_circle</i><span class="id">Bisa digunakan untuk <span class="highlight">header artikel</span> atau bagian lain</span><span class="en">Can be used for <span class="highlight">article headers</span> or other sections</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="info-box">
-                        <div class="info-title"><i class="material-icons">lightbulb</i><span>Penggunaan</span></div>
+                        <div class="info-title">
+                            <i class="material-icons">lightbulb</i>
+                            <span class="id">Penggunaan</span>
+                            <span class="en">Usage</span>
+                        </div>
                         <div class="info-content">
                             <ul class="usage-list">
-                                <li class="usage-item"><i class="material-icons">check_circle</i><span>Tidak terbatas pada <span class="highlight">satu per halaman</span></span></li>
-                                <li class="usage-item"><i class="material-icons">check_circle</i><span>Bisa digunakan dalam <span class="highlight">section</span> atau <span class="highlight">article</span></span></li>
+                                <li class="usage-item"><i class="material-icons">check_circle</i><span class="id">Tidak terbatas pada <span class="highlight">satu per halaman</span></span><span class="en">Not limited to <span class="highlight">one per page</span></span></li>
+                                <li class="usage-item"><i class="material-icons">check_circle</i><span class="id">Bisa digunakan dalam <span class="highlight">section</span> atau <span class="highlight">article</span></span><span class="en">Can be used within <span class="highlight">section</span> or <span class="highlight">article</span></span></li>
                             </ul>
                         </div>
                     </div>
@@ -689,37 +758,52 @@
     <section class="slide" id="slide-benefits">
         <div class="slide-content-container">
             <div class="header">
-                <h1 class="title">Manfaat HTML Semantik</h1>
-                <p class="subtitle">Keuntungan menggunakan elemen semantik dalam pengembangan web</p>
+                <h1 class="title">
+                    <span class="id">Manfaat HTML Semantik</span>
+                    <span class="en">Benefits of Semantic HTML</span>
+                </h1>
+                <p class="subtitle">
+                    <span class="id">Keuntungan menggunakan elemen semantik dalam pengembangan web</span>
+                    <span class="en">Advantages of using semantic elements in web development</span>
+                </p>
             </div>
             <div class="content">
                 <div class="benefits-grid">
                     <div class="benefit-card">
                         <div class="benefit-icon"><i class="material-icons">accessibility</i></div>
-                        <h2 class="benefit-title">Aksesibilitas</h2>
+                        <h2 class="benefit-title">
+                            <span class="id">Aksesibilitas</span>
+                            <span class="en">Accessibility</span>
+                        </h2>
                         <ul class="benefit-list">
-                            <li class="benefit-item"><i class="material-icons">check_circle</i><span>Membantu <span class="highlight">screen reader</span> memahami struktur</span></li>
-                            <li class="benefit-item"><i class="material-icons">check_circle</i><span>Navigasi lebih <span class="highlight">mudah</span></span></li>
+                            <li class="benefit-item"><i class="material-icons">check_circle</i><span class="id">Membantu <span class="highlight">screen reader</span> memahami struktur</span><span class="en">Helps <span class="highlight">screen readers</span> understand structure</span></li>
+                            <li class="benefit-item"><i class="material-icons">check_circle</i><span class="id">Navigasi lebih <span class="highlight">mudah</span></span><span class="en"><span class="highlight">Easier</span> navigation</span></li>
                         </ul>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon"><i class="material-icons">search</i></div>
                         <h2 class="benefit-title">SEO</h2>
                         <ul class="benefit-list">
-                            <li class="benefit-item"><i class="material-icons">check_circle</i><span>Meningkatkan <span class="highlight">peringkat</span> mesin pencari</span></li>
-                            <li class="benefit-item"><i class="material-icons">check_circle</i><span>Meningkatkan <span class="highlight">rich snippets</span></span></li>
+                            <li class="benefit-item"><i class="material-icons">check_circle</i><span class="id">Meningkatkan <span class="highlight">peringkat</span> mesin pencari</span><span class="en">Improves search engine <span class="highlight">rankings</span></span></li>
+                            <li class="benefit-item"><i class="material-icons">check_circle</i><span class="id">Meningkatkan <span class="highlight">rich snippets</span></span><span class="en">Enhances <span class="highlight">rich snippets</span></span></li>
                         </ul>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon"><i class="material-icons">code</i></div>
-                        <h2 class="benefit-title">Pemeliharaan</h2>
+                        <h2 class="benefit-title">
+                            <span class="id">Pemeliharaan</span>
+                            <span class="en">Maintenance</span>
+                        </h2>
                         <ul class="benefit-list">
-                            <li class="benefit-item"><i class="material-icons">check_circle</i><span>Kode lebih <span class="highlight">terstruktur</span></span></li>
-                            <li class="benefit-item"><i class="material-icons">check_circle</i><span>Memudahkan <span class="highlight">kolaborasi</span></span></li>
+                            <li class="benefit-item"><i class="material-icons">check_circle</i><span class="id">Kode lebih <span class="highlight">terstruktur</span></span><span class="en">More <span class="highlight">structured</span> code</span></li>
+                            <li class="benefit-item"><i class="material-icons">check_circle</i><span class="id">Memudahkan <span class="highlight">kolaborasi</span></span><span class="en">Facilitates <span class="highlight">collaboration</span></span></li>
                         </ul>
                     </div>
                 </div>
-                <p class="footer-note">HTML semantik memberikan fondasi kokoh untuk pengembangan web modern</p>
+                <p class="footer-note">
+                    <span class="id">HTML semantik memberikan fondasi kokoh untuk pengembangan web modern</span>
+                    <span class="en">Semantic HTML provides a solid foundation for modern web development</span>
+                </p>
             </div>
         </div>
     </section>
@@ -728,22 +812,38 @@
     <section class="slide" id="slide-implementation">
         <div class="slide-content-container">
             <div class="header">
-                <h1 class="title">Contoh Implementasi</h1>
-                <p class="subtitle">Struktur lengkap halaman web dengan elemen semantik HTML5</p>
+                <h1 class="title">
+                    <span class="id">Contoh Implementasi</span>
+                    <span class="en">Implementation Example</span>
+                </h1>
+                <p class="subtitle">
+                    <span class="id">Struktur lengkap halaman web dengan elemen semantik HTML5</span>
+                    <span class="en">Complete web page structure with HTML5 semantic elements</span>
+                </p>
             </div>
             <div class="content">
                 <div class="left-section">
                     <div class="layout-preview">
-                        <div class="layout-title"><i class="material-icons">web</i><span>Struktur Halaman Web</span></div>
+                        <div class="layout-title">
+                            <i class="material-icons">web</i>
+                            <span class="id">Struktur Halaman Web</span>
+                            <span class="en">Web Page Structure</span>
+                        </div>
                         <div class="layout-content">
                             <div class="layout-header-box">
                                 <div class="layout-header-tag">&lt;header&gt;</div>
-                                <div class="layout-element">Logo & Judul Situs</div>
+                                <div class="layout-element">
+                                    <span class="id">Logo & Judul Situs</span>
+                                    <span class="en">Logo & Site Title</span>
+                                </div>
                             </div>
                             <div class="layout-main">
                                 <div class="layout-nav">
                                     <div class="layout-nav-tag">&lt;nav&gt;</div>
-                                    <div class="layout-element">Menu</div>
+                                    <div class="layout-element">
+                                        <span class="id">Menu</span>
+                                        <span class="en">Menu</span>
+                                    </div>
                                 </div>
                                 <div class="layout-content-area">
                                     <div class="layout-element">Main</div>
@@ -752,7 +852,10 @@
                             </div>
                             <div class="layout-footer">
                                 <div class="layout-footer-tag">&lt;footer&gt;</div>
-                                <div class="layout-element">Info Kontak</div>
+                                <div class="layout-element">
+                                    <span class="id">Info Kontak</span>
+                                    <span class="en">Contact Info</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -773,6 +876,36 @@
             </div>
         </div>
     </section>
+
+    <script>
+        // Language Toggle Functionality
+        const html = document.documentElement;
+        const langBtns = document.querySelectorAll('[data-lang-btn]');
+        
+        // Load saved language preference or default to Indonesian
+        const savedLang = localStorage.getItem('preferredLanguage') || 'id';
+        html.setAttribute('data-lang', savedLang);
+        updateActiveButton(savedLang);
+        
+        langBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang-btn');
+                html.setAttribute('data-lang', lang);
+                localStorage.setItem('preferredLanguage', lang);
+                updateActiveButton(lang);
+            });
+        });
+        
+        function updateActiveButton(lang) {
+            langBtns.forEach(btn => {
+                if (btn.getAttribute('data-lang-btn') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
