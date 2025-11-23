@@ -23,7 +23,7 @@ const About = () => {
     },
     {
       icon: Instagram,
-      href: "https://instagram.com/atharasyid21",
+      href: "https://instagram.com/athadiary21",
       label: "Instagram"
     }
   ];
