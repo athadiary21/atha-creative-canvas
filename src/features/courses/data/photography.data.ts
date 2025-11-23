@@ -4,7 +4,7 @@ export const photographyCourses: Course[] = [
   // === BEGINNER LEVEL - Photography Fundamentals ===
   {
     id: 'penemuan-photography',
-    title: 'Sejarah Penemuan Fotografi',
+    title: 'History of Photography Discovery',
     description: 'Kisah Niépce, Daguerre, dan Talbot: Tiga tokoh pionir dalam sejarah fotografi. Pelajari bagaimana fotografi pertama kali ditemukan dan berkembang.',
     category: 'photography',
     thumbnail: '/courses/photography/penemuan-photography.jpg',
@@ -19,7 +19,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'photography-20th',
-    title: 'Fotografi di Abad ke-20',
+    title: 'Photography in the 20th Century',
     description: 'Eksplorasi perkembangan fotografi sepanjang abad ke-20, termasuk kemajuan teknologi, gaya fotografi, dan pengaruh budaya yang membentuk dunia fotografi modern.',
     category: 'photography',
     thumbnail: '/courses/photography/photo-20th.jpg',
@@ -34,7 +34,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'jenis-camera',
-    title: 'Jenis-Jenis Kamera',
+    title: 'Types of Cameras',
     description: 'Pelajari berbagai jenis kamera yang digunakan dalam fotografi, dari kamera film klasik hingga kamera digital modern, DSLR, mirrorless, dan smartphone.',
     category: 'photography',
     thumbnail: '/courses/photography/jenis-camera.jpg',
@@ -49,7 +49,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'fungsi-camera',
-    title: 'Fungsi & Bagian Kamera',
+    title: 'Camera Functions & Parts',
     description: 'Memahami fungsi dan bagian-bagian utama dari sebuah kamera fotografi untuk mengoptimalkan penggunaannya: body, shutter, viewfinder, sensor, dan controls.',
     category: 'photography',
     thumbnail: '/courses/photography/fungsi-camera.jpg',
@@ -64,7 +64,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'jenis-lensa',
-    title: 'Jenis-Jenis Lensa Kamera',
+    title: 'Types of Camera Lenses',
     description: 'Panduan lengkap tentang berbagai jenis lensa yang digunakan dalam fotografi: wide angle, standard, telephoto, macro, dan karakteristik masing-masing.',
     category: 'photography',
     thumbnail: '/courses/photography/jenis-lensa.jpg',
@@ -79,7 +79,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'focal-length',
-    title: 'Focal Length pada Lensa',
+    title: 'Focal Length in Lenses',
     description: 'Memahami focal length pada lensa kamera dan pengaruhnya terhadap field of view, perspective, dan hasil foto yang Anda ambil.',
     category: 'photography',
     thumbnail: '/courses/photography/focal.jpg',
@@ -94,7 +94,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'histogram',
-    title: 'Pengertian Histogram',
+    title: 'Understanding Histogram',
     description: 'Pelajari cara membaca histogram dalam fotografi untuk meningkatkan kualitas foto, mengatur exposure yang tepat, dan menghindari overexposure/underexposure.',
     category: 'photography',
     thumbnail: '/courses/photography/histogram.jpg',
@@ -126,7 +126,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'teknik-komposisi',
-    title: 'Teknik Komposisi Fotografi',
+    title: 'Photography Composition Techniques',
     description: 'Pelajari berbagai teknik komposisi dalam fotografi: rule of thirds, leading lines, framing, symmetry, dan golden ratio untuk menciptakan foto yang menarik.',
     category: 'photography',
     thumbnail: '/courses/photography/teknik.jpg',
@@ -141,7 +141,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'bentuk-photography',
-    title: 'Bentuk-Bentuk Fotografi',
+    title: 'Forms of Photography',
     description: 'Jelajahi berbagai bentuk dan genre fotografi: landscape, portrait, street, wildlife, macro, dan teknik yang digunakan dalam masing-masing untuk menghasilkan karya unik.',
     category: 'photography',
     thumbnail: '/courses/photography/bentuk-photography.jpg',
@@ -156,7 +156,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'sudut-pengambilan',
-    title: 'Sudut Pengambilan Gambar',
+    title: 'Camera Angles',
     description: 'Pelajari berbagai sudut pengambilan gambar dalam fotografi: eye level, high angle, low angle, bird view, dan worm view untuk menciptakan perspektif yang dinamis.',
     category: 'photography',
     thumbnail: '/courses/photography/sudut-gambar.jpg',
@@ -171,7 +171,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'sumber-cahaya',
-    title: 'Sumber Cahaya dalam Fotografi',
+    title: 'Light Sources in Photography',
     description: 'Memahami berbagai sumber cahaya dalam fotografi: natural light, artificial light, hard light, soft light, dan bagaimana menggunakannya untuk efek yang diinginkan.',
     category: 'photography',
     thumbnail: '/courses/photography/sumber-cahaya.jpg',
@@ -201,7 +201,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'flash',
-    title: 'Flash dalam Fotografi',
+    title: 'Flash in Photography',
     description: 'Pelajari penggunaan flash dalam fotografi: on-camera flash, off-camera flash, bounce flash, dan teknik dasar hingga lanjutan untuk pencahayaan optimal.',
     category: 'photography',
     thumbnail: '/courses/photography/flash.jpg',
@@ -216,7 +216,7 @@ export const photographyCourses: Course[] = [
   },
   {
     id: 'photogenic',
-    title: 'Teknik Photogenic',
+    title: 'Photogenic Techniques',
     description: 'Pelajari teknik photogenic untuk meningkatkan daya tarik visual subjek dalam fotografi: pose, pencahayaan, angle, ekspresi, dan styling.',
     category: 'photography',
     thumbnail: '/courses/photography/photogenic.jpg',
