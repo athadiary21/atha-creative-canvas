@@ -29,6 +29,13 @@ export const QuizDialog = ({ open, onOpenChange, quiz, onComplete }: QuizDialogP
     const newAnswers = [...userAnswers];
     newAnswers[currentQuestion] = answerIndex;
     setUserAnswers(newAnswers);
+    
+    // Auto-advance to next question after a short delay
+    if (currentQuestion < quiz.questions.length - 1) {
+      setTimeout(() => {
+        setCurrentQuestion(currentQuestion + 1);
+      }, 300);
+    }
   };
 
   const handleNext = () => {
