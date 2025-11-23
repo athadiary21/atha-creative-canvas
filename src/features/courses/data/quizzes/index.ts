@@ -2750,6 +2750,743 @@ export const courseQuizzes: CourseQuiz[] = [
         explanation: 'Emotional impact comes dari capturing genuine human moments, authentic expressions, connection dengan subjects - technical skill supports, emotion drives story.'
       }
     ]
+  },
+
+  // Teknik Komposisi
+  {
+    courseId: 'teknik-komposisi',
+    questions: [
+      {
+        id: 'komposisi-1',
+        question: 'Rule of thirds adalah?',
+        options: [
+          'Membagi frame menjadi 9 bagian equal dengan 2 garis horizontal dan 2 vertikal',
+          'Menggunakan 3 warna',
+          'Mengambil 3 foto',
+          'Fokus pada 3 subjek'
+        ],
+        correctAnswer: 0,
+        explanation: 'Rule of thirds membagi frame dengan 2 garis horizontal dan 2 vertikal, creating 9 sections. Place important elements di intersection points untuk composition yang lebih menarik.'
+      },
+      {
+        id: 'komposisi-2',
+        question: 'Leading lines digunakan untuk?',
+        options: [
+          'Membuat garis lurus',
+          'Guide viewer\'s eye to main subject',
+          'Draw grid',
+          'Create border'
+        ],
+        correctAnswer: 1,
+        explanation: 'Leading lines are lines dalam image (roads, rivers, fences) yang guide viewer\'s eye toward main subject, creating depth dan drawing attention.'
+      },
+      {
+        id: 'komposisi-3',
+        question: 'Negative space adalah?',
+        options: [
+          'Dark areas',
+          'Empty or unoccupied space around subject',
+          'Background only',
+          'Errors in composition'
+        ],
+        correctAnswer: 1,
+        explanation: 'Negative space adalah empty or unoccupied area around main subject. Gives subject room to breathe, emphasizes subject, creates minimalist feel.'
+      },
+      {
+        id: 'komposisi-4',
+        question: 'Framing technique involves?',
+        options: [
+          'Buying frames',
+          'Using elements dalam scene to create frame around subject',
+          'Cropping photo',
+          'Adding borders'
+        ],
+        correctAnswer: 1,
+        explanation: 'Framing uses natural elements dalam scene (doorways, windows, branches) untuk create frame around subject, directing attention dan adding depth.'
+      },
+      {
+        id: 'komposisi-5',
+        question: 'Symmetry dalam composition creates?',
+        options: [
+          'Boring images',
+          'Balance, harmony, dan visual appeal',
+          'Asymmetric feel',
+          'Distortion'
+        ],
+        correctAnswer: 1,
+        explanation: 'Symmetry (mirrored elements atau balanced composition) creates sense of harmony, order, dan visual appeal - powerful untuk architecture dan patterns.'
+      }
+    ]
+  },
+
+  // Bentuk Photography
+  {
+    courseId: 'bentuk-photography',
+    questions: [
+      {
+        id: 'bentuk-1',
+        question: 'Landscape photography focuses on?',
+        options: [
+          'People',
+          'Natural scenery, wide vistas, outdoors',
+          'Products',
+          'Events'
+        ],
+        correctAnswer: 1,
+        explanation: 'Landscape photography captures natural scenery - mountains, forests, coastlines, using wide-angle lenses dan small aperture untuk deep focus.'
+      },
+      {
+        id: 'bentuk-2',
+        question: 'Portrait photography ideal aperture adalah?',
+        options: [
+          'f/22 (deep DOF)',
+          'f/1.8-f/2.8 (shallow DOF untuk subject isolation)',
+          'f/16',
+          'Any aperture'
+        ],
+        correctAnswer: 1,
+        explanation: 'Portrait photography typically uses wide aperture (f/1.8-f/2.8) untuk shallow depth of field, blurring background dan isolating subject.'
+      },
+      {
+        id: 'bentuk-3',
+        question: 'Street photography characteristics?',
+        options: [
+          'Staged portraits',
+          'Candid moments of everyday life in public spaces',
+          'Studio setups',
+          'Only black and white'
+        ],
+        correctAnswer: 1,
+        explanation: 'Street photography captures candid, unposed moments dari everyday life di public spaces - authentic, spontaneous, telling stories of urban life.'
+      },
+      {
+        id: 'bentuk-4',
+        question: 'Wildlife photography typically requires?',
+        options: [
+          'Wide-angle lens',
+          'Long telephoto lens (200-600mm+)',
+          'Macro lens',
+          'Standard 50mm'
+        ],
+        correctAnswer: 1,
+        explanation: 'Wildlife photography needs long telephoto lenses (200-600mm+) untuk capture distant animals tanpa disturbing them, plus fast shutter untuk freeze motion.'
+      },
+      {
+        id: 'bentuk-5',
+        question: 'Macro photography focuses on?',
+        options: [
+          'Large landscapes',
+          'Extreme close-ups of small subjects',
+          'People',
+          'Architecture'
+        ],
+        correctAnswer: 1,
+        explanation: 'Macro photography captures extreme close-ups dari small subjects (insects, flowers, details) dengan magnification ratio 1:1 atau greater.'
+      }
+    ]
+  },
+
+  // Sudut Pengambilan
+  {
+    courseId: 'sudut-pengambilan',
+    questions: [
+      {
+        id: 'sudut-1',
+        question: 'Eye level angle adalah?',
+        options: [
+          'Shoot dari above subject',
+          'Camera at same height as subject (natural perspective)',
+          'Shoot dari below',
+          '45 degree angle'
+        ],
+        correctAnswer: 1,
+        explanation: 'Eye level angle shoots dengan camera at same height as subject, creating natural, neutral perspective - most common dan comfortable viewpoint.'
+      },
+      {
+        id: 'sudut-2',
+        question: 'High angle (shooting from above) makes subject appear?',
+        options: [
+          'Taller dan more powerful',
+          'Smaller, vulnerable, atau less significant',
+          'Neutral',
+          'Distorted'
+        ],
+        correctAnswer: 1,
+        explanation: 'High angle (camera above subject looking down) makes subject appear smaller, vulnerable, less powerful - good untuk showing environment atau making subject less threatening.'
+      },
+      {
+        id: 'sudut-3',
+        question: 'Low angle (shooting from below) makes subject appear?',
+        options: [
+          'Smaller',
+          'Powerful, dominant, imposing',
+          'Neutral',
+          'Shorter'
+        ],
+        correctAnswer: 1,
+        explanation: 'Low angle (camera below subject looking up) makes subject appear larger, powerful, dominant, imposing - emphasizes height dan strength.'
+      },
+      {
+        id: 'sudut-4',
+        question: 'Bird\'s eye view (overhead shot) provides?',
+        options: [
+          'Subject\'s perspective',
+          'Complete overhead view, showing layout dan patterns',
+          'Ground level',
+          'Eye level'
+        ],
+        correctAnswer: 1,
+        explanation: 'Bird\'s eye view (directly overhead) shows complete layout dari above, revealing patterns, arrangements, dan spatial relationships - popular untuk food, flat lays.'
+      },
+      {
+        id: 'sudut-5',
+        question: 'Dutch angle (tilted camera) creates?',
+        options: [
+          'Normal feeling',
+          'Tension, unease, dynamic energy',
+          'Stability',
+          'Softness'
+        ],
+        correctAnswer: 1,
+        explanation: 'Dutch angle (tilted horizon) creates sense of tension, unease, disorientation, atau dynamic energy - used untuk dramatic effect atau showing instability.'
+      }
+    ]
+  },
+
+  // Sumber Cahaya
+  {
+    courseId: 'sumber-cahaya',
+    questions: [
+      {
+        id: 'cahaya-1',
+        question: 'Natural light includes?',
+        options: [
+          'Studio lights',
+          'Sunlight, moonlight, skylight',
+          'Flash only',
+          'LED panels'
+        ],
+        correctAnswer: 1,
+        explanation: 'Natural light adalah cahaya dari sources alami: sunlight (direct atau diffused), moonlight, skylight, ambient outdoor light.'
+      },
+      {
+        id: 'cahaya-2',
+        question: 'Hard light creates?',
+        options: [
+          'Soft shadows',
+          'Strong, defined shadows dengan high contrast',
+          'No shadows',
+          'Even lighting'
+        ],
+        correctAnswer: 1,
+        explanation: 'Hard light (dari small, direct source seperti direct sun atau bare flash) creates strong, defined shadows dengan high contrast dan sharp edges.'
+      },
+      {
+        id: 'cahaya-3',
+        question: 'Soft light is characterized by?',
+        options: [
+          'Hard shadows',
+          'Gentle, diffused lighting dengan soft shadows',
+          'No light',
+          'Colored light'
+        ],
+        correctAnswer: 1,
+        explanation: 'Soft light (dari large, diffused sources seperti overcast sky atau softbox) creates gentle lighting dengan soft, gradual shadows - flattering untuk portraits.'
+      },
+      {
+        id: 'cahaya-4',
+        question: 'Backlighting (light behind subject) creates?',
+        options: [
+          'Front-lit subject',
+          'Silhouette atau rim light effect',
+          'Even exposure',
+          'No effect'
+        ],
+        correctAnswer: 1,
+        explanation: 'Backlighting (light source behind subject) creates silhouettes atau rim light effect, outlining subject dengan light halo - dramatic dan atmospheric.'
+      },
+      {
+        id: 'cahaya-5',
+        question: 'Window light is popular dalam portrait karena?',
+        options: [
+          'Too bright',
+          'Provides soft, directional, flattering light',
+          'Too dark',
+          'Creates harsh shadows'
+        ],
+        correctAnswer: 1,
+        explanation: 'Window light provides soft, directional, flattering light - large diffused source yang creates gentle shadows, perfect untuk natural-looking portraits.'
+      }
+    ]
+  },
+
+  // Golden Hour
+  {
+    courseId: 'golden-hour',
+    questions: [
+      {
+        id: 'golden-1',
+        question: 'Golden hour occurs?',
+        options: [
+          'Midday',
+          'Shortly after sunrise dan before sunset',
+          'Midnight',
+          'Anytime'
+        ],
+        correctAnswer: 1,
+        explanation: 'Golden hour adalah period shortly after sunrise dan before sunset ketika sun is low, creating warm, golden, soft light - ideal untuk photography.'
+      },
+      {
+        id: 'golden-2',
+        question: 'Golden hour light quality is?',
+        options: [
+          'Harsh dan high contrast',
+          'Warm, soft, low contrast dengan golden tones',
+          'Cool blue',
+          'Flat'
+        ],
+        correctAnswer: 1,
+        explanation: 'Golden hour provides warm, soft, low contrast light dengan beautiful golden/orange tones - flattering untuk portraits, landscapes, architectural photography.'
+      },
+      {
+        id: 'golden-3',
+        question: 'Blue hour occurs?',
+        options: [
+          'Midday',
+          'Before sunrise dan after sunset (twilight)',
+          'Noon',
+          'Never'
+        ],
+        correctAnswer: 1,
+        explanation: 'Blue hour adalah twilight period before sunrise dan after sunset ketika sun is below horizon, sky takes deep blue color - magical untuk cityscapes.'
+      },
+      {
+        id: 'golden-4',
+        question: 'During golden hour, shadows are?',
+        options: [
+          'Absent',
+          'Long, soft, dan less harsh',
+          'Short dan hard',
+          'Vertical'
+        ],
+        correctAnswer: 1,
+        explanation: 'Golden hour shadows are long (low sun angle), soft, dan less harsh compared to midday - adds depth tanpa harsh contrast.'
+      },
+      {
+        id: 'golden-5',
+        question: 'Best untuk photographing golden hour adalah?',
+        options: [
+          'Using flash only',
+          'Plan timing, arrive early, use reflectors/fill light when needed',
+          'Shoot randomly',
+          'Avoid this time'
+        ],
+        correctAnswer: 1,
+        explanation: 'Golden hour success requires planning (timing varies by season/location), arriving early untuk setup, using reflectors atau fill light untuk balance shadows.'
+      }
+    ]
+  },
+
+  // Flash
+  {
+    courseId: 'flash',
+    questions: [
+      {
+        id: 'flash-1',
+        question: 'On-camera flash vs off-camera flash?',
+        options: [
+          'No difference',
+          'Off-camera allows more creative control dan better lighting angles',
+          'On-camera always better',
+          'Off-camera not usable'
+        ],
+        correctAnswer: 1,
+        explanation: 'Off-camera flash (wireless atau cable) allows positioning light at various angles untuk more natural, dimensional lighting - more creative control than on-camera.'
+      },
+      {
+        id: 'flash-2',
+        question: 'Bounce flash technique is?',
+        options: [
+          'Direct flash at subject',
+          'Aim flash at ceiling/wall untuk reflect light',
+          'Turn off flash',
+          'Use two flashes'
+        ],
+        correctAnswer: 1,
+        explanation: 'Bounce flash aims flash upward ke ceiling atau walls, light reflects back untuk soft, diffused, more natural lighting - avoids harsh direct flash look.'
+      },
+      {
+        id: 'flash-3',
+        question: 'TTL flash mode automatically?',
+        options: [
+          'Turns flash off',
+          'Adjusts flash power based on metering untuk proper exposure',
+          'Sets to maximum power',
+          'Disables camera'
+        ],
+        correctAnswer: 1,
+        explanation: 'TTL (Through-The-Lens) metering automatically adjusts flash power based on scene exposure untuk proper balance - convenient untuk changing conditions.'
+      },
+      {
+        id: 'flash-4',
+        question: 'Manual flash mode gives photographer?',
+        options: [
+          'No control',
+          'Complete control over flash power output',
+          'Automatic everything',
+          'Random power'
+        ],
+        correctAnswer: 1,
+        explanation: 'Manual flash mode gives complete control - photographer sets exact power output (1/1, 1/2, 1/4, etc.) - consistent results, useful untuk controlled setups.'
+      },
+      {
+        id: 'flash-5',
+        question: 'Flash sync speed adalah?',
+        options: [
+          'Flash color',
+          'Fastest shutter speed usable dengan flash tanpa black bars',
+          'Flash battery life',
+          'Flash brightness'
+        ],
+        correctAnswer: 1,
+        explanation: 'Flash sync speed (typically 1/200-1/250s) adalah fastest shutter speed dapat digunakan dengan flash tanpa getting black bars - limited by mechanical shutter.'
+      }
+    ]
+  },
+
+  // Photogenic
+  {
+    courseId: 'photogenic',
+    questions: [
+      {
+        id: 'photo-1',
+        question: 'What makes someone photogenic?',
+        options: [
+          'Only natural beauty',
+          'Combination: knowing angles, lighting, pose, expression, confidence',
+          'Expensive camera',
+          'Random luck'
+        ],
+        correctAnswer: 1,
+        explanation: 'Photogenic quality comes dari knowing your best angles, understanding lighting, posing naturally, genuine expressions, dan confidence - skills yang can be learned.'
+      },
+      {
+        id: 'photo-2',
+        question: 'Best practice untuk posing portrait subjects?',
+        options: [
+          'Stiff, formal poses',
+          'Natural, relaxed poses dengan slight angles for flattering results',
+          'Face camera directly always',
+          'Don\'t give direction'
+        ],
+        correctAnswer: 1,
+        explanation: 'Best poses are natural dan relaxed, slight body angles (not flat to camera), weight on back foot, dan genuine expressions - photographer should give clear, positive direction.'
+      },
+      {
+        id: 'photo-3',
+        question: 'Facial angle untuk most flattering portraits?',
+        options: [
+          'Straight on always',
+          'Slight angle, chin slightly down, eyes to camera',
+          'Profile only',
+          'Looking down'
+        ],
+        correctAnswer: 1,
+        explanation: 'Most flattering: slight angle (not flat), chin slightly down (avoids double chin), eyes toward camera - emphasizes eyes, defines jawline.'
+      },
+      {
+        id: 'photo-4',
+        question: 'Light placement untuk flattering portrait?',
+        options: [
+          'Harsh direct light',
+          'Soft light at 45-degree angle (loop/Rembrandt lighting)',
+          'Bottom lighting',
+          'No light'
+        ],
+        correctAnswer: 1,
+        explanation: 'Flattering lighting: soft light source at 45-degree angle creates dimension dengan gentle shadows (loop atau Rembrandt lighting) - defines features naturally.'
+      },
+      {
+        id: 'photo-5',
+        question: 'Encouraging natural expressions involves?',
+        options: [
+          'Saying "cheese"',
+          'Creating comfortable environment, conversation, genuine moments',
+          'Being silent',
+          'Rushing shoot'
+        ],
+        correctAnswer: 1,
+        explanation: 'Natural expressions come dari comfortable subject, conversation, laughter, capturing genuine moments - build rapport, give positive feedback, avoid forced smiles.'
+      }
+    ]
+  },
+
+  // Black and White
+  {
+    courseId: 'black-and-white',
+    questions: [
+      {
+        id: 'bw-1',
+        question: 'Black and white photography emphasizes?',
+        options: [
+          'Colors',
+          'Tones, textures, contrast, shapes, composition',
+          'Saturation',
+          'Hues'
+        ],
+        correctAnswer: 1,
+        explanation: 'Without color distraction, black & white emphasizes tones, textures, contrast, shapes, lines, dan composition - powerful untuk emotional, artistic images.'
+      },
+      {
+        id: 'bw-2',
+        question: 'Converting to black & white, what\'s important?',
+        options: [
+          'Just desaturate',
+          'Adjust contrast, tones, dodge/burn untuk optimal tonal range',
+          'No adjustments needed',
+          'Add grain only'
+        ],
+        correctAnswer: 1,
+        explanation: 'Good B&W conversion requires adjusting contrast, tonal range (blacks, whites, midtones), selective dodging/burning - not just desaturation.'
+      },
+      {
+        id: 'bw-3',
+        question: 'High contrast B&W images feature?',
+        options: [
+          'Only grays',
+          'Strong blacks dan bright whites dengan minimal midtones',
+          'All midtones',
+          'Low contrast'
+        ],
+        correctAnswer: 1,
+        explanation: 'High contrast B&W has strong blacks, bright whites, minimal midtones - dramatic, bold feel. Good untuk graphic compositions, strong subjects.'
+      },
+      {
+        id: 'bw-4',
+        question: 'Low key B&W photography is?',
+        options: [
+          'Bright, light tones',
+          'Predominantly dark tones dengan minimal highlights',
+          'All white',
+          'Colorful'
+        ],
+        correctAnswer: 1,
+        explanation: 'Low key adalah predominantly dark tones dengan selective highlights - moody, dramatic, mysterious feel. Common dalam portrait dan fine art photography.'
+      },
+      {
+        id: 'bw-5',
+        question: 'Good subjects untuk B&W photography?',
+        options: [
+          'Only colorful subjects',
+          'Strong shapes, textures, contrast, patterns, emotions',
+          'Only outdoors',
+          'Nothing specific'
+        ],
+        correctAnswer: 1,
+        explanation: 'B&W excels dengan strong shapes, interesting textures, high contrast, patterns, architectural details, emotional portraits - subjects where form matters more than color.'
+      }
+    ]
+  },
+
+  // Contrast
+  {
+    courseId: 'contrast',
+    questions: [
+      {
+        id: 'contrast-1',
+        question: 'Tonal contrast refers to?',
+        options: [
+          'Color differences',
+          'Difference between light dan dark areas',
+          'Subject size',
+          'Sharpness'
+        ],
+        correctAnswer: 1,
+        explanation: 'Tonal contrast adalah difference between light dan dark values dalam image - high contrast has stark differences, low contrast more subtle transitions.'
+      },
+      {
+        id: 'contrast-2',
+        question: 'Color contrast creates visual interest through?',
+        options: [
+          'Using same color',
+          'Juxtaposing complementary atau contrasting colors',
+          'Black & white',
+          'Desaturation'
+        ],
+        correctAnswer: 1,
+        explanation: 'Color contrast uses complementary colors (opposite on color wheel) atau contrasting hues untuk create visual interest dan draw attention - red/green, blue/orange.'
+      },
+      {
+        id: 'contrast-3',
+        question: 'Conceptual contrast dalam photography involves?',
+        options: [
+          'Lighting only',
+          'Juxtaposing opposing ideas atau elements (old/new, big/small)',
+          'Camera settings',
+          'Only colors'
+        ],
+        correctAnswer: 1,
+        explanation: 'Conceptual contrast juxtaposes opposing ideas atau elements - old vs new, large vs small, natural vs man-made - creates narrative dan visual interest.'
+      },
+      {
+        id: 'contrast-4',
+        question: 'High contrast images work best untuk?',
+        options: [
+          'Soft, dreamy mood',
+          'Drama, bold graphics, strong subjects',
+          'Pastel themes',
+          'Subtle mood'
+        ],
+        correctAnswer: 1,
+        explanation: 'High contrast creates drama, bold graphic feel, emphasizes shapes - works untuk street photography, B&W, dramatic portraits, strong architectural shots.'
+      },
+      {
+        id: 'contrast-5',
+        question: 'Low contrast images convey?',
+        options: [
+          'High energy',
+          'Soft, gentle, dreamy, calm mood',
+          'Drama',
+          'Tension'
+        ],
+        correctAnswer: 1,
+        explanation: 'Low contrast creates soft, gentle, dreamy atmosphere - subtle tonal transitions, calm mood. Good untuk romantic portraits, misty landscapes, soft aesthetic.'
+      }
+    ]
+  },
+
+  // Editing Tools
+  {
+    courseId: 'editing-tools',
+    questions: [
+      {
+        id: 'tools-1',
+        question: 'Adobe Lightroom is primarily used for?',
+        options: [
+          'Video editing',
+          'Photo organization, RAW processing, batch editing',
+          '3D modeling',
+          'Vector graphics'
+        ],
+        correctAnswer: 1,
+        explanation: 'Lightroom specializes dalam photo organization (cataloging), RAW processing, non-destructive editing, batch processing - ideal workflow tool untuk photographers.'
+      },
+      {
+        id: 'tools-2',
+        question: 'Adobe Photoshop excels at?',
+        options: [
+          'Only basic adjustments',
+          'Detailed manipulation, compositing, retouching, layers',
+          'Only organization',
+          'Video editing'
+        ],
+        correctAnswer: 1,
+        explanation: 'Photoshop adalah powerful untuk detailed pixel manipulation, compositing multiple images, advanced retouching, layers, masking - when Lightroom isn\'t enough.'
+      },
+      {
+        id: 'tools-3',
+        question: 'RAW format advantage over JPEG is?',
+        options: [
+          'Smaller file size',
+          'More editing flexibility, wider dynamic range, more data',
+          'Faster processing',
+          'Better for web'
+        ],
+        correctAnswer: 1,
+        explanation: 'RAW files contain more data dari sensor - wider dynamic range, more editing flexibility (exposure, white balance), better quality - professional standard.'
+      },
+      {
+        id: 'tools-4',
+        question: 'Mobile editing apps like Snapseed/VSCO offer?',
+        options: [
+          'Nothing useful',
+          'Convenient on-the-go editing dengan presets dan tools',
+          'Only filters',
+          'Professional compositing'
+        ],
+        correctAnswer: 1,
+        explanation: 'Mobile apps offer convenient editing on-the-go - powerful tools, presets, filters, selective adjustments. Great untuk quick edits, social media, travel.'
+      },
+      {
+        id: 'tools-5',
+        question: 'Capture One is known for?',
+        options: [
+          'Video editing',
+          'Professional RAW processing dengan superior color handling',
+          'Only JPEG',
+          'Audio editing'
+        ],
+        correctAnswer: 1,
+        explanation: 'Capture One adalah professional RAW processor known untuk superior color accuracy, tethered shooting, advanced color grading - popular dengan commercial photographers.'
+      }
+    ]
+  },
+
+  // Basic Editing
+  {
+    courseId: 'basic-editing',
+    questions: [
+      {
+        id: 'edit-1',
+        question: 'Exposure adjustment controls?',
+        options: [
+          'Color only',
+          'Overall brightness of image',
+          'Sharpness',
+          'Saturation'
+        ],
+        correctAnswer: 1,
+        explanation: 'Exposure slider adjusts overall brightness dari image - brighten underexposed atau darken overexposed images. First basic adjustment dalam editing.'
+      },
+      {
+        id: 'edit-2',
+        question: 'White balance correction fixes?',
+        options: [
+          'Exposure',
+          'Color temperature untuk accurate colors (removing color casts)',
+          'Contrast',
+          'Sharpness'
+        ],
+        correctAnswer: 1,
+        explanation: 'White balance adjusts color temperature untuk remove unwanted color casts (too blue, too orange), ensuring whites appear white dan colors accurate.'
+      },
+      {
+        id: 'edit-3',
+        question: 'Contrast adjustment affects?',
+        options: [
+          'Hue only',
+          'Difference between light dan dark areas',
+          'Saturation only',
+          'File size'
+        ],
+        correctAnswer: 1,
+        explanation: 'Contrast increases atau decreases difference between lights dan darks - higher contrast more punch, lower contrast softer feel.'
+      },
+      {
+        id: 'edit-4',
+        question: 'Sharpening should be applied?',
+        options: [
+          'First step',
+          'Last step, carefully dengan proper amount',
+          'Not at all',
+          'Multiple times'
+        ],
+        correctAnswer: 1,
+        explanation: 'Sharpening adalah typically last step (after other adjustments) - enhances edge definition. Over-sharpening creates artifacts, halos. Use subtly untuk final polish.'
+      },
+      {
+        id: 'edit-5',
+        question: 'Cropping is used to?',
+        options: [
+          'Change colors',
+          'Improve composition, remove distractions, change aspect ratio',
+          'Add filters',
+          'Adjust exposure'
+        ],
+        correctAnswer: 1,
+        explanation: 'Cropping removes unnecessary areas, improves composition (applying rule of thirds, etc.), eliminates distractions, changes aspect ratio - powerful composition tool.'
+      }
+    ]
   }
 ];
 
