@@ -8,13 +8,24 @@ import SEO from "@/components/common/SEO";
 import { CourseStructuredData, BreadcrumbStructuredData } from "@/components/common/StructuredData";
 import { useCourseProgress } from "@/hooks/useCourseInteractions";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Download } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { generateCertificate, saveCertificateRecord } from "@/lib/certificateGenerator";
+import { Input } from "@/components/ui/input";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const CourseViewer = () => {
   const { courseId } = useParams();
   const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
+  const [showCertificateDialog, setShowCertificateDialog] = useState(false);
+  const [userName, setUserName] = useState('');
   
   const { course, error } = useCourse(courseId);
   const { progress, markAsViewed, markAsCompleted } = useCourseProgress(courseId || '');
@@ -31,11 +42,32 @@ const CourseViewer = () => {
   }, [course]);
 
   const handleMarkComplete = () => {
+    setShowCertificateDialog(true);
+  };
+
+  const handleGenerateCertificate = () => {
+    if (!userName.trim() || !course) return;
+    
     markAsCompleted();
+    
+    generateCertificate(course, userName.trim());
+    
+    saveCertificateRecord({
+      courseId: course.id,
+      courseName: course.title,
+      userName: userName.trim(),
+      completionDate: new Date().toISOString(),
+      duration: course.duration,
+      category: course.category
+    });
+    
     toast({
       title: t('courseViewer.completed'),
-      description: t('courseViewer.completedDesc'),
+      description: 'Certificate downloaded successfully!',
     });
+    
+    setShowCertificateDialog(false);
+    setUserName('');
   };
 
   if (error || !course) {
@@ -69,7 +101,40 @@ const CourseViewer = () => {
             {t('courseViewer.markComplete')}
           </Button>
         )}
+        {progress?.completed && (
+          <Button onClick={() => setShowCertificateDialog(true)} variant="outline" className="gap-2">
+            <Download className="w-4 h-4" />
+            Download Certificate
+          </Button>
+        )}
       </Header>
+
+      <Dialog open={showCertificateDialog} onOpenChange={setShowCertificateDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Generate Certificate</DialogTitle>
+            <DialogDescription>
+              Enter your name to generate your course completion certificate
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 pt-4">
+            <Input
+              placeholder="Enter your full name"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleGenerateCertificate()}
+            />
+            <Button 
+              onClick={handleGenerateCertificate} 
+              disabled={!userName.trim()}
+              className="w-full gap-2"
+            >
+              <Download className="w-4 h-4" />
+              Generate & Download Certificate
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <main className="flex-1">
         {isLoading && (
