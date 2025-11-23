@@ -10,6 +10,7 @@ import {
   type CourseProgress,
   type CourseReview
 } from '@/lib/storage';
+import { QuizResult } from '@/types/quiz';
 
 export const useCourseProgress = (courseId: string) => {
   const [progress, setProgress] = useState<CourseProgress | null>(null);
@@ -41,6 +42,26 @@ export const useCourseProgress = (courseId: string) => {
     setProgress(newProgress);
   };
 
+  const saveQuizResult = (quizResult: QuizResult) => {
+    const newProgress: CourseProgress = {
+      courseId,
+      completed: quizResult.passed,
+      lastAccessed: Date.now(),
+      progress: progress?.progress || 100,
+      quizPassed: quizResult.passed,
+      quizAttempts: quizResult.attempts,
+      quizScore: quizResult.score,
+      lastQuizDate: quizResult.lastAttempt
+    };
+    updateCourseProgress(newProgress);
+    setProgress(newProgress);
+    
+    // Save quiz result to localStorage
+    const quizResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
+    quizResults.push(quizResult);
+    localStorage.setItem('quizResults', JSON.stringify(quizResults));
+  };
+
   const markAsCompleted = () => {
     const newProgress: CourseProgress = {
       courseId,
@@ -52,7 +73,11 @@ export const useCourseProgress = (courseId: string) => {
     setProgress(newProgress);
   };
 
-  return { progress, markAsViewed, markAsCompleted, updateProgress };
+  const canTakeQuiz = () => {
+    return (progress?.progress || 0) >= 100;
+  };
+
+  return { progress, markAsViewed, markAsCompleted, updateProgress, saveQuizResult, canTakeQuiz };
 };
 
 export const useCourseBookmark = (courseId: string) => {

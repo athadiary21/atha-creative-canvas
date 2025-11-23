@@ -5,6 +5,10 @@ export interface CourseProgress {
   completed: boolean;
   lastAccessed: number;
   progress: number; // 0-100
+  quizPassed?: boolean;
+  quizAttempts?: number;
+  quizScore?: number;
+  lastQuizDate?: number;
 }
 
 export interface CourseBookmark {
