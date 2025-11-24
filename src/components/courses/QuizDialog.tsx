@@ -89,23 +89,23 @@ export const QuizDialog = ({ open, onOpenChange, quiz, onComplete }: QuizDialogP
     
     return (
       <Dialog open={open} onOpenChange={onOpenChange}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl flex items-center gap-3">
+            <DialogTitle className="text-xl sm:text-2xl flex items-center gap-2 sm:gap-3">
               {passed ? (
                 <>
-                  <CheckCircle2 className="w-8 h-8 text-green-500" />
+                  <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
                   Selamat! Anda Lulus!
                 </>
               ) : (
                 <>
-                  <XCircle className="w-8 h-8 text-destructive" />
+                  <XCircle className="w-6 h-6 sm:w-8 sm:h-8 text-destructive" />
                   Belum Berhasil
                 </>
               )}
             </DialogTitle>
-            <DialogDescription className="text-base">
-              Skor Anda: <span className="font-bold text-lg">{score}/{quiz.questions.length}</span>
+            <DialogDescription className="text-sm sm:text-base">
+              Skor Anda: <span className="font-bold text-base sm:text-lg">{score}/{quiz.questions.length}</span>
             </DialogDescription>
           </DialogHeader>
 
@@ -118,21 +118,21 @@ export const QuizDialog = ({ open, onOpenChange, quiz, onComplete }: QuizDialogP
                 <div
                   key={question.id}
                   className={cn(
-                    'p-4 rounded-lg border-2',
+                    'p-3 sm:p-4 rounded-lg border-2',
                     isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-950/20' : 'border-destructive bg-red-50 dark:bg-red-950/20'
                   )}
                 >
-                  <div className="flex items-start gap-3 mb-2">
+                  <div className="flex items-start gap-2 sm:gap-3 mb-2">
                     {isCorrect ? (
-                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mt-0.5" />
                     ) : (
-                      <XCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+                      <XCircle className="w-4 h-4 sm:w-5 sm:h-5 text-destructive flex-shrink-0 mt-0.5" />
                     )}
                     <div className="flex-1">
-                      <p className="font-medium mb-2">
+                      <p className="text-sm sm:text-base font-medium mb-2">
                         {index + 1}. {question.question}
                       </p>
-                      <div className="text-sm space-y-1">
+                      <div className="text-xs sm:text-sm space-y-1">
                         <p>
                           <span className="font-medium">Jawaban Anda:</span>{' '}
                           <span className={isCorrect ? 'text-green-700 dark:text-green-400' : 'text-destructive'}>
@@ -160,18 +160,18 @@ export const QuizDialog = ({ open, onOpenChange, quiz, onComplete }: QuizDialogP
             })}
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
             {passed ? (
-              <Button onClick={handleFinish} className="flex-1 gap-2">
+              <Button onClick={handleFinish} className="w-full sm:flex-1 gap-2 h-11">
                 <CheckCircle2 className="w-4 h-4" />
                 Lanjut ke Sertifikat
               </Button>
             ) : (
               <>
-                <Button onClick={handleRetry} variant="outline" className="flex-1">
+                <Button onClick={handleRetry} variant="outline" className="w-full sm:flex-1 h-11">
                   Coba Lagi
                 </Button>
-                <Button onClick={() => onOpenChange(false)} variant="secondary" className="flex-1">
+                <Button onClick={() => onOpenChange(false)} variant="secondary" className="w-full sm:flex-1 h-11">
                   Pelajari Ulang
                 </Button>
               </>
@@ -186,10 +186,10 @@ export const QuizDialog = ({ open, onOpenChange, quiz, onComplete }: QuizDialogP
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl">
+      <DialogContent>
         <DialogHeader>
-          <DialogTitle>Quiz - Pertanyaan {currentQuestion + 1} dari {quiz.questions.length}</DialogTitle>
-          <DialogDescription>
+          <DialogTitle className="text-lg sm:text-xl">Quiz - Pertanyaan {currentQuestion + 1} dari {quiz.questions.length}</DialogTitle>
+          <DialogDescription className="text-xs sm:text-sm">
             Pilih jawaban yang paling tepat untuk setiap pertanyaan
           </DialogDescription>
         </DialogHeader>
@@ -198,7 +198,7 @@ export const QuizDialog = ({ open, onOpenChange, quiz, onComplete }: QuizDialogP
           {/* Progress Bar */}
           <div className="space-y-2">
             <Progress value={progressPercent} className="h-2" />
-            <div className="flex justify-between text-xs text-muted-foreground">
+            <div className="flex justify-between text-[10px] sm:text-xs text-muted-foreground">
               <span>Pertanyaan {currentQuestion + 1}/{quiz.questions.length}</span>
               <span>{userAnswers.filter(a => a !== null).length} terjawab</span>
             </div>
@@ -206,35 +206,35 @@ export const QuizDialog = ({ open, onOpenChange, quiz, onComplete }: QuizDialogP
 
           {/* Question */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{question.question}</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">{question.question}</h3>
             
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {question.options.map((option, index) => (
                 <button
                   key={index}
                   onClick={() => handleAnswerSelect(index)}
                   className={cn(
-                    'w-full p-4 text-left rounded-lg border-2 transition-all hover:border-primary',
+                    'w-full p-3 sm:p-4 text-left rounded-lg border-2 transition-all hover:border-primary active:scale-[0.98] min-h-[44px]',
                     currentAnswer === index
                       ? 'border-primary bg-primary/10'
                       : 'border-border bg-background'
                   )}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2 sm:gap-3">
                     <div
                       className={cn(
-                        'w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0',
+                        'w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0',
                         currentAnswer === index
                           ? 'border-primary bg-primary'
                           : 'border-border'
                       )}
                     >
                       {currentAnswer === index && (
-                        <div className="w-3 h-3 rounded-full bg-primary-foreground" />
+                        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-primary-foreground" />
                       )}
                     </div>
-                    <span className="font-medium">{String.fromCharCode(65 + index)}.</span>
-                    <span>{option}</span>
+                    <span className="text-xs sm:text-sm font-medium">{String.fromCharCode(65 + index)}.</span>
+                    <span className="text-sm sm:text-base">{option}</span>
                   </div>
                 </button>
               ))}
@@ -242,18 +242,18 @@ export const QuizDialog = ({ open, onOpenChange, quiz, onComplete }: QuizDialogP
           </div>
 
           {/* Navigation */}
-          <div className="flex items-center justify-between gap-3 pt-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 pt-4">
             <Button
               onClick={handlePrevious}
               disabled={currentQuestion === 0}
               variant="outline"
-              className="gap-2"
+              className="w-full sm:w-auto gap-2 h-11 order-2 sm:order-1"
             >
               <ChevronLeft className="w-4 h-4" />
-              Sebelumnya
+              <span className="sm:inline">Sebelumnya</span>
             </Button>
 
-            <div className="flex gap-2">
+            <div className="hidden sm:flex gap-2 order-1 sm:order-2">
               {quiz.questions.map((_, index) => (
                 <button
                   key={index}
@@ -276,18 +276,18 @@ export const QuizDialog = ({ open, onOpenChange, quiz, onComplete }: QuizDialogP
               <Button
                 onClick={handleSubmit}
                 disabled={!allAnswered}
-                className="gap-2"
+                className="w-full sm:w-auto gap-2 h-11 order-3"
               >
-                Submit Quiz
+                <span>Submit</span>
                 <CheckCircle2 className="w-4 h-4" />
               </Button>
             ) : (
               <Button
                 onClick={handleNext}
                 disabled={currentQuestion === quiz.questions.length - 1}
-                className="gap-2"
+                className="w-full sm:w-auto gap-2 h-11 order-3"
               >
-                Selanjutnya
+                <span>Selanjutnya</span>
                 <ChevronRight className="w-4 h-4" />
               </Button>
             )}
