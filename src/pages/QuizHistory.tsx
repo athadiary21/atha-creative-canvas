@@ -1,5 +1,6 @@
 import { useQuizHistory } from '@/hooks/useQuizHistory';
 import { AnalyticsDashboard } from '@/components/quiz-history/AnalyticsDashboard';
+import { ChartsSection } from '@/components/quiz-history/ChartsSection';
 import { HistoryCard } from '@/components/quiz-history/HistoryCard';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -98,6 +99,9 @@ const QuizHistory = () => {
             <>
               {/* Analytics Dashboard */}
               {stats && <AnalyticsDashboard stats={stats} />}
+
+              {/* Charts Section */}
+              {stats && stats.recentAttempts.length > 0 && <ChartsSection stats={stats} />}
 
               {/* Course Breakdown */}
               {stats && stats.courseBreakdown.length > 0 && (
