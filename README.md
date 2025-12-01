@@ -8,6 +8,7 @@
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge&logo=icense-MIT-green&logoColor=white)
 
 ## 🌟 Fitur Utama
 
@@ -84,3 +85,43 @@ Pastikan Anda sudah menginstal:
 
 4.  **Buka di browser**
     Buka [http://localhost:8080](http://localhost:8080) (atau port lain yang muncul di terminal).
+
+# 📂 Struktur Project
+```
+src/ ├── assets/ # Gambar dan aset statis
+├── components/ # Komponen React reusable (UI, Layout, Features) │
+├── common/ # Komponen umum (SEO, Image, Toggle Bahasa) │
+├── courses/ # Komponen spesifik fitur Kursus │
+├── home/ # Komponen halaman utama (Hero, About, Portfolio) │
+├── quiz-history/# Komponen dashboard analitik │
+└── ui/ # Komponen dasar Shadcn UI (Button, Card, dll)
+├── features/ # Logic bisnis dan data statis (Materi kursus, Soal kuis)
+├── hooks/ # Custom React Hooks
+├── i18n/ # Konfigurasi bahasa (JSON locales)
+├── integrations/ # Integrasi pihak ketiga (Supabase client)
+├── lib/ # Utility functions
+├── pages/ # Halaman utama (Routes)
+└── types/ # Definisi TypeScript Interfaces/Types
+```
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi selalu diterima! Jika Anda ingin menambahkan materi kursus baru atau memperbaiki bug:
+
+1.  Fork repositori ini.
+2.  Buat branch fitur baru (`git checkout -b fitur-keren`).
+3.  Commit perubahan Anda (`git commit -m 'Menambahkan fitur keren'`).
+4.  Push ke branch (`git push origin fitur-keren`).
+5.  Buat Pull Request.
+
+---
+
+## 📄 Lisensi
+
+Didistribusikan di bawah ![License](https://img.shields.io/badge/license-MIT-green.svg). Lihat ![License](https://img.shields.io/badge/license-MIT-green.svg) untuk informasi lebih lanjut.
+
+---
+
+**Dibuat oleh Atha Diary**
