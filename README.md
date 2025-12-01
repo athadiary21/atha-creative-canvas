@@ -1,73 +1,86 @@
-# Welcome to your Lovable project
+# Atha Portfolio & Learning Platform
 
-## Project info
+**Platform Portofolio Pribadi & E-Learning Interaktif**
+>
+> Website ini tidak hanya berfungsi sebagai *showcase* portofolio profesional, tetapi juga sebagai platform pembelajaran interaktif yang menyediakan kursus *Coding* dan *Photography* lengkap dengan sistem kuis dan pelacakan progres belajar.
 
-**URL**: https://lovable.dev/projects/a5f0ce15-7d07-49bb-8da2-060b9f2960f7
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-## How can I edit this code?
+## 🌟 Fitur Utama
 
-There are several ways of editing your application.
+### 🎨 Portofolio Profesional
+* Desain responsif dan modern dengan animasi halus.
+* Bagian khusus untuk menampilkan proyek, skill, dan pengalaman.
+* Mode Gelap/Terang (jika diimplementasikan lewat Shadcn UI).
 
-**Use Lovable**
+### 📚 Modul Pembelajaran (Learning Management)
+* **Dua Jalur Kursus:** Materi lengkap untuk **Coding** (HTML, CSS, JS, React) dan **Photography** (Teknik dasar, Lighting, Editing).
+* **Materi Terstruktur:** Konten disajikan per bab dengan ilustrasi visual.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a5f0ce15-7d07-49bb-8da2-060b9f2960f7) and start prompting.
+### 🧠 Kuis & Evaluasi
+* Sistem kuis interaktif di setiap akhir materi.
+* Skor instan dan umpan balik jawaban.
+* **Sertifikat:** (Opsional) Fitur generate sertifikat setelah menyelesaikan modul.
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📊 Analitik & Riwayat (User Dashboard)
+* **Quiz History:** Melacak riwayat nilai kuis yang pernah dikerjakan.
+* **Visualisasi Data:** Grafik perkembangan belajar menggunakan *Recharts*.
+* Backend terintegrasi dengan **Supabase** untuk menyimpan data pengguna.
 
-**Use your preferred IDE**
+### 🌍 Internasionalisasi (i18n)
+* Mendukung **9 Bahasa**: Indonesia, Inggris, Arab, Jepang, Mandarin, Rusia, Perancis, Jerman, dan Spanyol.
+* Deteksi bahasa otomatis atau manual switch.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Tech Stack
 
-Follow these steps:
+Project ini dibangun menggunakan teknologi web modern:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+* **Frontend Framework:** [React 18](https://reactjs.org/)
+* **Language:** [TypeScript](https://www.typescriptlang.org/)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+* **UI Components:** [Shadcn UI](https://ui.shadcn.com/) (berbasis Radix UI)
+* **State Management & Data Fetching:** React Query (TanStack Query)
+* **Internationalization:** i18next
+* **Charts:** Recharts
+* **Icons:** Lucide React
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🚀 Cara Menjalankan Project (Local Development)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Ikuti langkah-langkah berikut untuk menjalankan project ini di komputer Anda:
 
-**Edit a file directly in GitHub**
+### Prasyarat
+Pastikan Anda sudah menginstal:
+* Node.js (versi 18 atau terbaru)
+* npm (atau yarn/bun)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Langkah Instalasi
 
-**Use GitHub Codespaces**
+1.  **Clone repositori ini**
+    ```bash
+    git clone [https://github.com/username-anda/atha-portfolio.git](https://github.com/username-anda/atha-portfolio.git)
+    cd atha-portfolio
+    ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2.  **Install dependencies**
+    ```bash
+    npm install
+    # atau jika menggunakan bun
+    bun install
+    ```
 
-## What technologies are used for this project?
 
-This project is built with:
+3.  **Jalankan server development**
+    ```bash
+    npm run dev
+    ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a5f0ce15-7d07-49bb-8da2-060b9f2960f7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+4.  **Buka di browser**
+    Buka [http://localhost:8080](http://localhost:8080) (atau port lain yang muncul di terminal).
